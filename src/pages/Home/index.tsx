@@ -1,9 +1,3 @@
-import {
-  EnvelopeSimple,
-  GithubLogo,
-  InstagramLogo,
-  LinkedinLogo,
-} from "phosphor-react";
 import { useNavigate } from "react-router-dom";
 import { Letter } from "../../components/Letter";
 import { ContainerHome } from "./styles";
@@ -55,23 +49,6 @@ export function Home() {
         >
           Meus Projetos
         </button>
-      </div>
-      <div>
-        <div className="social-home">
-          <div>
-            <InstagramLogo size={27} />
-          </div>
-          <div>
-            <GithubLogo size={27} />
-          </div>
-          <div>
-            <LinkedinLogo size={27} />
-          </div>
-          <div>
-            <EnvelopeSimple size={27} />
-          </div>
-          <span className="line-social"></span>
-        </div>
       </div>
     </ContainerHome>
   );

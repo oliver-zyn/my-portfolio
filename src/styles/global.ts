@@ -6,8 +6,8 @@ export const GlobalStyle = createGlobalStyle`
 
     --gray-100: #CECECE;
     --gray-500: #29292e;
+    --gray-600: #161616;
     --gray-700: #121214;
-    --gray-900: #161616;
     /* --gray-gradient: linear-gradient(270deg,#121214,#09090a); */
 
     --white: #FAFAFA
@@ -30,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background: var(--gray-900);
+      background: var(--gray-700);
       background: radial-gradient(circle, rgba(22,24,24,1) 0%, rgba(9,9,10,1) 71%);
       -webkit-font-smoothing: antialiased;
     }

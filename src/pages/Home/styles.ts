@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-export const ContainerHome = styled.div`
+export const ContainerHome = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 6rem;
 
   .title-home {
     display: flex;
@@ -19,6 +18,7 @@ export const ContainerHome = styled.div`
       color: var(--light-blue);
       font-size: 2.1rem;
       font-family: "Roboto Mono", monospace;
+      text-shadow: 0px 0px 16px rgba(66, 211, 255, 0.25);
     }
 
     & > span:last-child {
@@ -74,55 +74,6 @@ export const ContainerHome = styled.div`
     }
   }
 
-  .social-home {
-    color: var(--gray-100);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
-
-    .line-social {
-      height: 7.1rem;
-      width: 2px;
-      background: var(--gray-100);
-      border-radius: 2px;
-      opacity: 0;
-      animation: onload-line-anim 1s 0.8s ease forwards;
-    }
-
-    svg {
-      transition: 0.3s ease;
-      cursor: pointer;
-    }
-
-    div {
-      opacity: 0;
-    }
-
-    div:first-child {
-      animation: onload-social-anim 1s 1s ease forwards;
-    }
-
-    div:nth-child(2) {
-      animation: onload-social-anim 1s 1.3s ease forwards;
-    }
-
-    div:nth-child(3) {
-      animation: onload-social-anim 1s 1.6s ease forwards;
-    }
-
-    div:nth-child(4) {
-      animation: onload-social-anim 1s 1.9s ease forwards;
-    }
-
-    svg:hover {
-      color: var(--white);
-      transform: translateY(-3px);
-    }
-  }
-
   @keyframes onload-title-anim {
     0% {
       transform: translateY(-40px);
@@ -137,26 +88,6 @@ export const ContainerHome = styled.div`
   @keyframes onload-button-anim {
     0% {
       transform: translateY(40px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes onload-line-anim {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes onload-social-anim {
-    0% {
-      transform: translateY(-5px);
       opacity: 0;
     }
     100% {

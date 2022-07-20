@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const ContainerSidebar = styled.aside`
@@ -10,6 +10,7 @@ export const ContainerSidebar = styled.aside`
   position: relative;
   opacity: 0;
   animation: onload-anim 2s ease forwards;
+  margin-right: 6rem;
 
   header {
     display: flex;
