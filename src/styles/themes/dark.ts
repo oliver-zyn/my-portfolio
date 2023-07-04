@@ -6,8 +6,5 @@ export const darkTheme = {
   'gray-600': '#161616',
   'gray-700': '#121214',
 
-  'background-gradient':
-    'radial-gradient(circle, rgba(22,24,24,1) 0%, rgba(9,9,10,1) 71%)',
-
   'text-base': '#FAFAFA',
 } as const

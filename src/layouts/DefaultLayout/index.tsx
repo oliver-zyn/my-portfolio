@@ -1,13 +1,15 @@
 import { Outlet } from 'react-router-dom'
+import { DefaultLayoutContainer } from './syles'
+import { Header } from '../../components/Header'
 
 export function DefaultLayout() {
   return (
-    <div>
-      <h1>opa</h1>
+    <DefaultLayoutContainer>
+      <Header />
 
       <main>
         <Outlet />
       </main>
-    </div>
+    </DefaultLayoutContainer>
   )
 }

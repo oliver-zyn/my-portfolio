@@ -8,12 +8,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme['background-gradient']};
+    background: ${(props) => props.theme['gray-700']};
+    background: radial-gradient(circle, rgba(22,24,24,1) 0%, rgba(9,9,10,1) 71%);
+    color: ${(props) => props.theme['text-base']};
     -webkit-font-smoothing: antialiased;
   }
 
   body, input, textarea, button {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 1rem;
   }
@@ -24,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: var(--gray-100);
+    color: ${(props) => props.theme['gray-100']};
   }
 
   button {
