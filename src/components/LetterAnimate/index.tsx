@@ -1,22 +1,22 @@
 import { useState } from 'react'
-import { LetterContainer } from './styles'
+import { LetterAnimateContainer } from './styles'
 
 interface LetterProps {
   children: string
 }
 
-export function Letter({ children }: LetterProps) {
+export function LetterAnimate({ children }: LetterProps) {
   const [hovered, setHovered] = useState(false)
   const toggleHover = () => {
     setHovered(!hovered)
   }
   return (
-    <LetterContainer
-      className={hovered ? 'bouncing' : ''}
+    <LetterAnimateContainer
+      isHovered={hovered}
       onMouseEnter={toggleHover}
       onAnimationEnd={toggleHover}
     >
       {children}
-    </LetterContainer>
+    </LetterAnimateContainer>
   )
 }

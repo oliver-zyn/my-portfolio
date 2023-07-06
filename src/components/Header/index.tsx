@@ -1,12 +1,10 @@
-import { Lightning, Moon } from 'phosphor-react'
-import { HeaderContainer, Icon, ThemeButton } from './styles'
+import { Moon } from 'phosphor-react'
+import { HeaderContainer, Logo, ThemeButton } from './styles'
 
 export function Header() {
   return (
     <HeaderContainer>
-      <Icon>
-        <Lightning weight="duotone" size={40} />
-      </Icon>
+      <Logo>{'{ oliver }'}</Logo>
 
       <nav>
         <a href="#">Sobre</a>

@@ -33,6 +33,10 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+  :focus {
+    outline: none;
+  }
+
   [disabeld] {
     opacity: 0.6;
     cursor: not-allowed;

@@ -1,17 +1,19 @@
 import styled from 'styled-components'
 
-export const LetterContainer = styled.span`
+interface LetterContainerProps {
+  isHovered: boolean
+}
+
+export const LetterAnimateContainer = styled.span<LetterContainerProps>`
   display: block;
+  animation: ${(props) =>
+    props.isHovered ? 'rubberband-anim 800ms alternate ease-out' : 'none'};
 
   &:hover {
     color: ${(props) => props.theme['light-blue']};
   }
 
-  &.bouncing {
-    animation: rubberband 800ms alternate ease-out;
-  }
-
-  @keyframes rubberband {
+  @keyframes rubberband-anim {
     0% {
       transform: scaleX(1);
     }
