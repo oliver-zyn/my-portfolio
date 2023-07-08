@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: ${(props) => props.theme['gray-700']};
     background: radial-gradient(circle, rgba(22,24,24,1) 0%, rgba(9,9,10,1) 71%);
@@ -43,12 +47,16 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body::-webkit-scrollbar {
-    width: .4em;
+    width: 0.3rem;
   }
- 
+  
+  body::-webkit-scrollbar-track {
+    background: ${(props) => props.theme['gray-700']};
+  }
+  
   body::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme['gray-100']};
-    border-radius: 4px;
+    background: ${(props) => props.theme['gray-100']};
+    border-radius: 20px;
   }
 
   @media (max-width: 900px) {

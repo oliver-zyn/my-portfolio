@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const SocialLinksContainer = styled.aside`
   width: 100%;
-  padding: 4rem 0;
+  padding: 5rem 0;
 
   & > div {
     position: relative;

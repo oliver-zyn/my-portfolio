@@ -5,7 +5,7 @@ export const HomeContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 0;
+  padding: 8rem 0;
 
   @media (max-width: 750px) {
     justify-content: center;
@@ -42,9 +42,8 @@ export const TitleHome = styled.div`
   & > span:last-child {
     color: ${(props) => props.theme['gray-100']};
     font-size: 1.1rem;
-    font-weight: 400;
     padding: 1.4rem 0 1.7rem;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 32.5rem;
   }
 

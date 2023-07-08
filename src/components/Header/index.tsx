@@ -7,7 +7,7 @@ export function Header() {
       <Logo>{'{ oliver }'}</Logo>
 
       <nav>
-        <a href="#">Sobre</a>
+        <a href="#about">Sobre</a>
         <a href="#">Projetos</a>
         <a href="#">Contato</a>
         <ThemeButton>
