@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme['gray-700']};
-    background: radial-gradient(circle, rgba(22,24,24,1) 0%, rgba(9,9,10,1) 71%);
+    background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(9,9,10,1) 71%);
     color: ${(props) => props.theme['text-base']};
     -webkit-font-smoothing: antialiased;
   }

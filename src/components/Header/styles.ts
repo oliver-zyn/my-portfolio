@@ -19,7 +19,8 @@ export const HeaderContainer = styled.header`
       position: relative;
       line-height: 2;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: ${(props) => props.theme['text-base']};
       }
 

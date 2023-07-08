@@ -1,12 +1,14 @@
 import { styled } from 'styled-components'
 
-export const AboutContainer = styled.section`
+export const ProjectsContainer = styled.section`
   width: 100%;
+  padding: 5rem 0;
 `
 
-export const TitleAbout = styled.div`
+export const TitleProjects = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.1rem;
 
   & > span {
@@ -23,16 +25,9 @@ export const TitleAbout = styled.div`
   }
 `
 
-export const BodyAbout = styled.div`
-  & > p {
-    color: ${(props) => props.theme['gray-100']};
-    padding: 1.4rem 0 2rem;
-    line-height: 1.7;
-  }
-
-  & > div {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  }
+export const BodyProjects = styled.div`
+  padding-top: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
 `

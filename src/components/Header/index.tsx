@@ -8,7 +8,7 @@ export function Header() {
 
       <nav>
         <a href="#about">Sobre</a>
-        <a href="#">Projetos</a>
+        <a href="#projects">Projetos</a>
         <a href="#">Contato</a>
         <ThemeButton>
           <Moon size={30} />

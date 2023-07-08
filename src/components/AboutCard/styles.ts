@@ -2,14 +2,23 @@ import { styled } from 'styled-components'
 
 export const AboutCardContainer = styled.div`
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 4fr;
   grid-template-areas:
     'icon title'
     'icon description';
-  align-items: center;
+
   background: ${(props) => props.theme['gray-600']};
-  border-radius: 2px;
   padding: 2rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
+  border-radius: 2px;
+  border-bottom: 1px solid ${(props) => props.theme['text-base']};
+  transition: border-color 0.2s;
+  cursor: default;
+
+  &:hover {
+    border-bottom: 1px solid ${(props) => props.theme['light-blue']};
+  }
 
   svg {
     grid-area: icon;

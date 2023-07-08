@@ -3,7 +3,7 @@ export const darkTheme = {
 
   'gray-100': '#CECECE',
   'gray-500': '#29292e',
-  'gray-600': '#161616',
+  'gray-600': '#18181A',
   'gray-700': '#121214',
 
   'text-base': '#FAFAFA',

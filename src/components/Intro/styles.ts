@@ -7,6 +7,14 @@ export const HomeContainer = styled.section`
   justify-content: space-between;
   padding: 8rem 0;
 
+  & > div:last-child {
+    transition: 0.2s ease-in-out;
+  }
+
+  & > div:last-child:hover {
+    transform: scale(1.04) rotate(1deg);
+  }
+
   @media (max-width: 750px) {
     justify-content: center;
     text-align: center;

@@ -8,7 +8,7 @@ export function About() {
   const arrayAbout = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
 
   return (
-    <Fade duration={1000}>
+    <Fade duration={1000} delay={300}>
       <AboutContainer id="about">
         <TitleAbout>
           <span>Quem sou?</span>

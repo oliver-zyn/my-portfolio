@@ -6,6 +6,7 @@ interface LetterContainerProps {
 
 export const LetterAnimateContainer = styled.span<LetterContainerProps>`
   display: block;
+  cursor: default;
   animation: ${(props) =>
     props.isHovered ? 'rubberband-anim 800ms alternate ease-out' : 'none'};
 
