@@ -1,7 +1,13 @@
 import { Fade } from 'react-awesome-reveal'
 import { LetterAnimate } from '../LetterAnimate'
 import { ProjectCard } from '../ProjectCard'
-import { BodyProjects, ProjectsContainer, TitleProjects } from './styles'
+import {
+  BodyProjects,
+  FilterButton,
+  ProjectsContainer,
+  TitleProjects,
+} from './styles'
+import { useState } from 'react'
 
 export function Projects() {
   const arrayProjects = [
@@ -61,6 +67,12 @@ export function Projects() {
     },
   ]
 
+  const [selectedFilter, setselectedFilter] = useState('all')
+
+  const projectsFilter = projects.filter((project) =>
+    project.tags.includes(selectedFilter),
+  )
+
   return (
     <Fade duration={1000} delay={300}>
       <ProjectsContainer id="projects">
@@ -77,17 +89,63 @@ export function Projects() {
           </h1>
         </TitleProjects>
         <BodyProjects>
-          {projects.map((project, index) => (
-            <ProjectCard
-              key={index}
-              imgUrl={project.imgUrl}
-              codeUrl={project.codeUrl}
-              demoUrl={project.demoUrl}
-              title={project.title}
-              tags={project.tags}
-              description={project.description}
-            />
-          ))}
+          <div className="project-filter">
+            <FilterButton
+              onClick={() => setselectedFilter('all')}
+              active={selectedFilter === 'all'}
+            >
+              Todos
+            </FilterButton>
+            <FilterButton
+              onClick={() => setselectedFilter('react')}
+              active={selectedFilter === 'react'}
+            >
+              React
+            </FilterButton>
+            <FilterButton
+              onClick={() => setselectedFilter('tailwind')}
+              active={selectedFilter === 'tailwind'}
+            >
+              Tailwind
+            </FilterButton>
+            <FilterButton
+              onClick={() => setselectedFilter('node')}
+              active={selectedFilter === 'node'}
+            >
+              Node.js
+            </FilterButton>
+            <FilterButton
+              onClick={() => setselectedFilter('next')}
+              active={selectedFilter === 'next'}
+            >
+              Next.js
+            </FilterButton>
+          </div>
+          <div className="project-list">
+            {selectedFilter === 'all'
+              ? projects.map((project, index) => (
+                  <ProjectCard
+                    key={index}
+                    imgUrl={project.imgUrl}
+                    codeUrl={project.codeUrl}
+                    demoUrl={project.demoUrl}
+                    title={project.title}
+                    tags={project.tags}
+                    description={project.description}
+                  />
+                ))
+              : projectsFilter.map((project, index) => (
+                  <ProjectCard
+                    key={index}
+                    imgUrl={project.imgUrl}
+                    codeUrl={project.codeUrl}
+                    demoUrl={project.demoUrl}
+                    title={project.title}
+                    tags={project.tags}
+                    description={project.description}
+                  />
+                ))}
+          </div>
         </BodyProjects>
       </ProjectsContainer>
     </Fade>
