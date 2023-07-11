@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme['gray-700']};
-    background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(9,9,10,1) 71%);
+    background: radial-gradient(circle, rgba(15,15,15,1) 0%, rgba(9,9,10,1) 71%);
     color: ${(props) => props.theme['text-base']};
     -webkit-font-smoothing: antialiased;
   }
@@ -46,15 +46,15 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
 
-  body::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 0.4rem;
   }
   
-  body::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background: ${(props) => props.theme['gray-700']};
   }
   
-  body::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background: ${(props) => props.theme['gray-100']};
     border-radius: 20px;
   }

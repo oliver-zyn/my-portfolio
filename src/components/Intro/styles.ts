@@ -21,7 +21,7 @@ export const HomeContainer = styled.section`
 
     & > div:first-child {
       h1,
-      button {
+      a {
         margin: auto;
       }
     }
@@ -67,7 +67,8 @@ export const TitleHome = styled.div`
   }
 `
 
-export const ButtonHome = styled.button`
+export const ButtonHome = styled.a`
+  max-width: 11rem;
   background: transparent;
   border: 1px solid ${(props) => props.theme['light-blue']};
   color: ${(props) => props.theme['light-blue']};
@@ -96,14 +97,12 @@ export const ButtonHome = styled.button`
     z-index: -1;
   }
 
-  &:hover::before,
-  &:focus::before {
+  &:is(:hover, :focus)::before {
     right: 0;
   }
 
-  &:hover,
-  &:focus {
-    color: #000;
+  &:is(:hover, :focus) {
+    color: ${(props) => props.theme['gray-600']};
   }
 
   @keyframes onload-button-anim {

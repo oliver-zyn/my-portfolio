@@ -10,7 +10,7 @@ import {
 import { useState } from 'react'
 
 export function Projects() {
-  const arrayProjects = [
+  const titleProjectsArray = [
     'M',
     'i',
     'n',
@@ -61,6 +61,24 @@ export function Projects() {
       demoUrl: '',
       codeUrl: '',
       title: 'Meu Projeto',
+      tags: ['react', 'node'],
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nesciunt culpa quisquam eos in minus mollitia cumque voluptas veritatis.',
+    },
+    {
+      imgUrl: 'https://im-gabi.vercel.app/ignews.png',
+      demoUrl: '',
+      codeUrl: '',
+      title: 'Meu Projeto',
+      tags: ['react'],
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nesciunt culpa quisquam eos in minus mollitia cumque voluptas veritatis.',
+    },
+    {
+      imgUrl: 'https://im-gabi.vercel.app/ignews.png',
+      demoUrl: '',
+      codeUrl: '',
+      title: 'Meu Projeto',
       tags: ['react', 'typescript'],
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nesciunt culpa quisquam eos in minus mollitia cumque voluptas veritatis.',
@@ -74,12 +92,12 @@ export function Projects() {
   )
 
   return (
-    <Fade duration={1000} delay={300}>
+    <Fade duration={1000} delay={300} triggerOnce>
       <ProjectsContainer id="projects">
         <TitleProjects>
           <span>Projetos</span>
           <h1>
-            {arrayProjects.map((letter, index) => {
+            {titleProjectsArray.map((letter, index) => {
               return letter === ' ' ? (
                 <span key={index}>{'\u00A0'}</span>
               ) : (
@@ -113,6 +131,12 @@ export function Projects() {
               active={selectedFilter === 'node'}
             >
               Node.js
+            </FilterButton>
+            <FilterButton
+              onClick={() => setselectedFilter('typescript')}
+              active={selectedFilter === 'typescript'}
+            >
+              Typescript
             </FilterButton>
             <FilterButton
               onClick={() => setselectedFilter('next')}

@@ -2,13 +2,12 @@ import { styled } from 'styled-components'
 
 export const ProjectsContainer = styled.section`
   width: 100%;
-  padding: 5rem 0;
+  padding-top: 10rem;
 `
 
 export const TitleProjects = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   gap: 0.1rem;
 
   & > span {
@@ -28,10 +27,11 @@ export const TitleProjects = styled.div`
 export const BodyProjects = styled.div`
   div.project-filter {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    padding: 5rem 0 3rem;
-    gap: 5rem;
+    flex-wrap: wrap;
+    padding: 3rem 0 4rem;
+    gap: 3rem;
   }
 
   div.project-list {
@@ -47,6 +47,8 @@ interface FilterButtonProps {
 
 export const FilterButton = styled.button<FilterButtonProps>`
   all: unset;
+  width: 5rem;
+  text-align: center;
   border-radius: 2px;
   padding: 0.7rem 1.7rem;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
@@ -60,7 +62,7 @@ export const FilterButton = styled.button<FilterButtonProps>`
 
   transition: color 0.2s, border-color 0.2s;
 
-  &:hover {
+  &:is(:hover, :focus) {
     color: ${(props) => props.theme['text-base']};
   }
 `

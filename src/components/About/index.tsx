@@ -5,15 +5,15 @@ import { AboutContainer, BodyAbout, TitleAbout } from './styles'
 import { Fade } from 'react-awesome-reveal'
 
 export function About() {
-  const arrayAbout = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
+  const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
 
   return (
-    <Fade duration={1000} delay={300}>
+    <Fade duration={1000} delay={300} triggerOnce>
       <AboutContainer id="about">
         <TitleAbout>
           <span>Quem sou?</span>
           <h1>
-            {arrayAbout.map((letter, index) => {
+            {titleAboutArray.map((letter, index) => {
               return letter === ' ' ? (
                 <span key={index}>{'\u00A0'}</span>
               ) : (

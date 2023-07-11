@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const SocialLinksContainer = styled.aside`
   width: 100%;
-  padding: 5rem 0;
+  padding-top: 5rem;
 
   & > div {
     position: relative;
@@ -16,8 +16,7 @@ export const SocialLinksContainer = styled.aside`
       opacity: 0;
       animation: onload-social-icons-anim 1s 1.5s ease forwards;
 
-      &:hover,
-      &:focus {
+      &:is(:hover, :focus) {
         color: ${(props) => props.theme['text-base']};
         transform: translateY(-4px);
       }

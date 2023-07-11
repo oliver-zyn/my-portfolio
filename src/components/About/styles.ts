@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 
 export const AboutContainer = styled.section`
   width: 100%;
+  padding-top: 10rem;
 `
 
 export const TitleAbout = styled.div`

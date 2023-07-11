@@ -10,7 +10,7 @@ export const ProjectCardContainer = styled.div`
   transition: border-color 0.2s;
   cursor: default;
 
-  &:hover {
+  &:is(:hover, :focus) {
     border-bottom: 1px solid ${(props) => props.theme['light-blue']};
 
     & > div:first-child > div {
@@ -54,8 +54,7 @@ export const ImageProjectCard = styled.div`
       opacity: 0;
       animation: on-display-a 0.2s 0.1s ease-in-out forwards;
 
-      &:focus::after,
-      &:hover::after {
+      &:is(:hover, :focus)::after {
         width: 100%;
         left: 0%;
       }

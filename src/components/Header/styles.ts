@@ -19,13 +19,11 @@ export const HeaderContainer = styled.header`
       position: relative;
       line-height: 2;
 
-      &:hover,
-      &:focus {
+      &:is(:hover, :focus) {
         color: ${(props) => props.theme['text-base']};
       }
 
-      &:focus::after,
-      &:hover::after {
+      &:is(:hover, :focus)::after {
         width: 100%;
         left: 0%;
       }
@@ -70,8 +68,7 @@ export const ThemeButton = styled.button`
   color: ${(props) => props.theme['gray-100']};
   transition: color 0.2s;
 
-  &:hover,
-  &:focus {
+  &:is(:hover, :focus) {
     color: ${(props) => props.theme['text-base']};
   }
 `

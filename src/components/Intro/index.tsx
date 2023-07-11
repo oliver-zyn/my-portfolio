@@ -2,7 +2,7 @@ import { LetterAnimate } from '../LetterAnimate'
 import { ButtonHome, HomeContainer, ImageHome, TitleHome } from './styles'
 
 export function Intro() {
-  const arrayOliverzyn = ['O', 'l', 'i', 'v', 'e', 'r', 'z', 'y', 'n']
+  const titleIntroArray = ['O', 'l', 'i', 'v', 'e', 'r', 'z', 'y', 'n']
 
   return (
     <HomeContainer>
@@ -10,7 +10,7 @@ export function Intro() {
         <TitleHome>
           <span>Olá, eu sou</span>
           <h1>
-            {arrayOliverzyn.map((letter, index) => {
+            {titleIntroArray.map((letter, index) => {
               return <LetterAnimate key={index}>{letter}</LetterAnimate>
             })}
           </h1>
@@ -19,7 +19,7 @@ export function Intro() {
             com código e design.
           </span>
         </TitleHome>
-        <ButtonHome>Meus Projetos</ButtonHome>
+        <ButtonHome href="#projects">Meus Projetos</ButtonHome>
       </div>
       <div>
         <ImageHome>
