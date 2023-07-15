@@ -1,8 +1,9 @@
 import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
 import { AboutCard } from '../AboutCard'
-import { LetterAnimate } from '../LetterAnimate'
-import { AboutContainer, BodyAbout, TitleAbout } from './styles'
+import { AboutContainer, BodyAbout } from './styles'
 import { Fade } from 'react-awesome-reveal'
+import { TitleSection } from '../TitleSection'
+import profileImg from '../../assets/profile.jpg'
 
 export function About() {
   const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
@@ -10,48 +11,43 @@ export function About() {
   return (
     <Fade duration={1000} delay={300} triggerOnce>
       <AboutContainer id="about">
-        <TitleAbout>
-          <span>Quem sou?</span>
-          <h1>
-            {titleAboutArray.map((letter, index) => {
-              return letter === ' ' ? (
-                <span key={index}>{'\u00A0'}</span>
-              ) : (
-                <LetterAnimate key={index}>{letter}</LetterAnimate>
-              )
-            })}
-          </h1>
-        </TitleAbout>
+        <div className="profileImg">
+          <img src={profileImg} alt="Imagem de Oliver" />
+        </div>
         <BodyAbout>
-          <p>
-            Sou um desenvolvedor frontend apaixonado por criar experiências
-            digitais incríveis. Com habilidades sólidas em HTML, CSS e
-            JavaScript, estou sempre buscando aprender e aplicar novas
-            tecnologias para melhorar o desenvolvimento web. Minha paixão pela
-            programação começou durante a faculdade e, desde então, venho
-            trabalhando em diversos projetos desafiadores.
-          </p>
-          <div>
+          <TitleSection
+            subtitle="Quem sou?"
+            titleLetterArray={titleAboutArray}
+          />
+          <div className="aboutTextList">
+            <p>
+              Me chamo Oliver, sou um jovem entusiasta na área de tecnologia com
+              pouco mais de 2 anos de experiência. Atualmente sou desenvolvedor
+              na Sponte, colaborando no desenvolvimento de soluções inovadoras
+              para escolas de idiomas.
+            </p>
+            <p>
+              Sempre em busca de aplicar as melhores práticas de desenvolvimento
+              para entregar produtos de qualidade e experiências incríveis.
+              Principais tecnologias: <strong>React</strong>,{' '}
+              <strong>Node</strong>, <strong>TailwindCSS</strong>,{' '}
+              <strong>TypeScript</strong> e <strong>.NET</strong>.
+            </p>
+          </div>
+          <div className="aboutCardList">
             <AboutCard
-              icon={<ChatsCircle size={80} />}
+              icon={<ChatsCircle size={40} />}
               title="Comunicação Efetiva"
-              description="Capacidade de transmitir ideias de forma clara e concisa."
             />
             <AboutCard
-              icon={<Palette size={80} />}
+              icon={<Palette size={40} />}
               title="Pensamento Criativo"
-              description="Abordagem criativa na resolução de problemas, buscando soluções inovadoras."
             />
             <AboutCard
-              icon={<UsersThree size={80} />}
+              icon={<UsersThree size={40} />}
               title="Trabalho em Equipe"
-              description="Habilidade em trabalhar de forma colaborativa, contribuindo e ouvindo ideias."
             />
-            <AboutCard
-              icon={<Brain size={80} />}
-              title="Adaptabilidade"
-              description="Adaptar-se rapidamente a novas tecnologias e requisitos do projeto."
-            />
+            <AboutCard icon={<Brain size={40} />} title="Adaptabilidade" />
           </div>
         </BodyAbout>
       </AboutContainer>

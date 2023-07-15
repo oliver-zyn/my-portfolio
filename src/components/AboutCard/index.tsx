@@ -4,18 +4,16 @@ import { AboutCardContainer } from './styles'
 interface AboutCardProps {
   icon: IconProps
   title: string
-  description: string
 }
 
-export function AboutCard({ icon, title, description }: AboutCardProps) {
+export function AboutCard({ icon, title }: AboutCardProps) {
   return (
     <AboutCardContainer>
       <div className="icon">
         <>{icon}</>
       </div>
       <div className="text">
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <p>{title}</p>
       </div>
     </AboutCardContainer>
   )

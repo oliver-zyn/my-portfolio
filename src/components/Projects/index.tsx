@@ -1,13 +1,8 @@
 import { Fade } from 'react-awesome-reveal'
-import { LetterAnimate } from '../LetterAnimate'
 import { ProjectCard } from '../ProjectCard'
-import {
-  BodyProjects,
-  FilterButton,
-  ProjectsContainer,
-  TitleProjects,
-} from './styles'
+import { BodyProjects, FilterButton, ProjectsContainer } from './styles'
 import { useState } from 'react'
+import { TitleSection } from '../TitleSection'
 
 export function Projects() {
   const titleProjectsArray = [
@@ -94,18 +89,10 @@ export function Projects() {
   return (
     <Fade duration={1000} delay={300} triggerOnce>
       <ProjectsContainer id="projects">
-        <TitleProjects>
-          <span>Projetos</span>
-          <h1>
-            {titleProjectsArray.map((letter, index) => {
-              return letter === ' ' ? (
-                <span key={index}>{'\u00A0'}</span>
-              ) : (
-                <LetterAnimate key={index}>{letter}</LetterAnimate>
-              )
-            })}
-          </h1>
-        </TitleProjects>
+        <TitleSection
+          subtitle="Projetos"
+          titleLetterArray={titleProjectsArray}
+        />
         <BodyProjects>
           <div className="project-filter">
             <FilterButton
