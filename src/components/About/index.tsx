@@ -3,7 +3,7 @@ import { AboutCard } from '../AboutCard'
 import { AboutContainer, BodyAbout } from './styles'
 import { Fade } from 'react-awesome-reveal'
 import { TitleSection } from '../TitleSection'
-import profileImg from '../../assets/profile.jpg'
+import profileImg from '../../assets/profile.png'
 
 export function About() {
   const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
@@ -23,8 +23,8 @@ export function About() {
             <p>
               Me chamo Oliver, sou um jovem entusiasta na área de tecnologia com
               pouco mais de 2 anos de experiência. Atualmente sou desenvolvedor
-              na Sponte, colaborando no desenvolvimento de soluções inovadoras
-              para escolas de idiomas.
+              na Linx Sponte, colaborando no desenvolvimento de soluções
+              inovadoras para escolas de idiomas.
             </p>
             <p>
               Sempre em busca de aplicar as melhores práticas de desenvolvimento
