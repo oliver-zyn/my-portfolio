@@ -3,6 +3,8 @@ import { styled } from 'styled-components'
 export const ProjectCardContainer = styled.div`
   border-radius: 2px;
   overflow: hidden;
+  height: 415px;
+  max-width: 348px;
 
   background: ${(props) => props.theme['gray-600']};
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
