@@ -94,6 +94,36 @@ export function Projects() {
       description:
         'A aplicação consiste em um teste de reflexo, onde o seu objetivo é clicar o mais rápido que conseguir quando o circulo branco mudar de cor.',
     },
+    {
+      imgUrl:
+        'https://user-images.githubusercontent.com/89222905/259567603-b7e93547-42db-4082-9678-e717cf2881eb.png',
+      demoUrl: 'https://feednac.netlify.app',
+      codeUrl: 'https://github.com/oliver-zyn/feednac_2.0',
+      title: 'Feednac',
+      tags: ['react', 'typescript'],
+      description:
+        'O Feednac consiste no frontend de uma página para postar feedbacks sobre a instituição do Senac, criado como projeto integrador.',
+    },
+    {
+      imgUrl:
+        'https://user-images.githubusercontent.com/89222905/259569112-fee67b8b-25f1-4d78-8ff5-22125bc02789.png',
+      demoUrl: 'https://oliver-zyn.github.io/projeto-cantina/',
+      codeUrl: 'https://github.com/oliver-zyn/projeto-cantina',
+      title: 'Cantina Senac',
+      tags: ['html/css/js'],
+      description:
+        'A Cantina Senac é o frontend criado para uma página de vendas dos produtos disponíveis para venda na cantina do senac, criado como projeto integrador.',
+    },
+    {
+      imgUrl:
+        'https://user-images.githubusercontent.com/89222905/174495123-bfcc3601-8c88-4995-b5b0-caa17c7f3e8d.png',
+      demoUrl: 'https://todo-list-oliverzyn.netlify.app',
+      codeUrl: 'https://github.com/oliver-zyn/todo-list',
+      title: 'Todo List',
+      tags: ['react', 'typescript'],
+      description:
+        'Projeto criado para resolver um desafio do curso Ignite da rocketseat. O projeto é uma lista de tarefas simples.',
+    },
   ]
 
   const [selectedFilter, setselectedFilter] = useState('all')
@@ -136,16 +166,10 @@ export function Projects() {
               Node.js
             </FilterButton>
             <FilterButton
-              onClick={() => setselectedFilter('typescript')}
-              active={selectedFilter === 'typescript'}
+              onClick={() => setselectedFilter('html/css/js')}
+              active={selectedFilter === 'html/css/js'}
             >
-              Typescript
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('next')}
-              active={selectedFilter === 'next'}
-            >
-              Next.js
+              Html/Css/Js
             </FilterButton>
           </div>
           <div className="project-list">
