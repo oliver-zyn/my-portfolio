@@ -20,7 +20,7 @@ export function SocialLinks() {
           <LinkedinLogo size={30} />
         </a>
         <a
-          href="https://www.instagram.com/oliverzyn.dev/"
+          href="https://www.instagram.com/oliverzyn_/"
           target="_blank"
           rel="noreferrer"
         >
