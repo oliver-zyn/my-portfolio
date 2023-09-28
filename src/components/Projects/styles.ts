@@ -17,6 +17,7 @@ export const BodyProjects = styled.div`
 
   div.project-list {
     display: grid;
+    justify-items: center;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
   }
@@ -28,7 +29,7 @@ interface FilterButtonProps {
 
 export const FilterButton = styled.button<FilterButtonProps>`
   all: unset;
-  width: 5rem;
+  width: 5.6rem;
   text-align: center;
   border-radius: 2px;
   padding: 0.7rem 1.7rem;
