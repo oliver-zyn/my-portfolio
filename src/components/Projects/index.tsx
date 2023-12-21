@@ -56,12 +56,12 @@ export function Projects() {
     {
       imgUrl:
         'https://github.com/oliver-zyn/ignite-shop/assets/89222905/4c597ad6-d2e9-4450-b4b8-348abff05949',
-      demoUrl: 'https://todo-list-oliverzyn.netlify.app',
-      codeUrl: 'https://github.com/oliver-zyn/todo-list',
+      demoUrl: 'https://ignite-shop-oliverzyn.vercel.app',
+      codeUrl: 'https://github.com/oliver-zyn/ignite-shop',
       title: 'Ignite Shop',
       tags: ['next', 'typescript'],
       description:
-        'Projeto criado para resolver um desafio do curso Ignite da rocketseat. O projeto é uma lista de tarefas simples.',
+        'Projeto consiste em uma página que lista camisetas que estão disponíveis para compra, podendo adicioná-las a um carrinho e realizar a compra através da API do Stripe.',
     },
     {
       imgUrl:
