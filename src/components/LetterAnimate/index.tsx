@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import { LetterAnimateContainer } from './styles'
+import { useState } from 'react'
 
 interface LetterProps {
   children: string
@@ -12,7 +12,7 @@ export function LetterAnimate({ children }: LetterProps) {
   }
   return (
     <LetterAnimateContainer
-      isHovered={hovered}
+      $hovered={hovered}
       onMouseEnter={toggleHover}
       onAnimationEnd={toggleHover}
     >

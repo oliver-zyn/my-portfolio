@@ -1,4 +1,5 @@
 import { GithubLogo, InstagramLogo, LinkedinLogo } from 'phosphor-react'
+
 import { SocialLinksContainer } from './styles'
 
 export function SocialLinks() {

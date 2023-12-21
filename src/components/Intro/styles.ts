@@ -65,6 +65,12 @@ export const TitleHome = styled.div`
       opacity: 1;
     }
   }
+
+  @media (max-width: 750px) {
+    & > h1 {
+      font-size: 5rem;
+    }
+  }
 `
 
 export const ButtonHome = styled.a`

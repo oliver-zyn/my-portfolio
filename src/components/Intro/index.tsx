@@ -1,5 +1,6 @@
-import { LetterAnimate } from '../LetterAnimate'
 import { ButtonHome, HomeContainer, ImageHome, TitleHome } from './styles'
+
+import { LetterAnimate } from '../LetterAnimate'
 
 export function Intro() {
   const titleIntroArray = ['O', 'l', 'i', 'v', 'e', 'r', 'z', 'y', 'n']

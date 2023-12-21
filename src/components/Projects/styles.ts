@@ -24,7 +24,7 @@ export const BodyProjects = styled.div`
 `
 
 interface FilterButtonProps {
-  active: boolean
+  $active: boolean
 }
 
 export const FilterButton = styled.button<FilterButtonProps>`
@@ -36,10 +36,10 @@ export const FilterButton = styled.button<FilterButtonProps>`
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
   background: ${(props) => props.theme['gray-600']};
   color: ${(props) =>
-    props.active ? props.theme['text-base'] : props.theme['gray-100']};
+    props.$active ? props.theme['text-base'] : props.theme['gray-100']};
   border-bottom: 1px solid
     ${(props) =>
-      props.active ? props.theme['light-blue'] : props.theme['gray-600']};
+      props.$active ? props.theme['light-blue'] : props.theme['gray-600']};
   cursor: pointer;
 
   transition: color 0.2s, border-color 0.2s;

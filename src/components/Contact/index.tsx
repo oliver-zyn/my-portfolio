@@ -1,5 +1,6 @@
-import { Fade } from 'react-awesome-reveal'
 import { BodyContact, ContactContainer } from './styles'
+
+import { Fade } from 'react-awesome-reveal'
 import { TitleSection } from '../TitleSection'
 
 export function Contact() {
@@ -35,7 +36,12 @@ export function Contact() {
               maxLength={200}
               required
             ></textarea>
-            <button>Enviar mensagem</button>
+            <button
+              type="button"
+              onClick={() => alert('Indisponível no momento :(')}
+            >
+              Enviar mensagem
+            </button>
           </form>
         </BodyContact>
       </ContactContainer>

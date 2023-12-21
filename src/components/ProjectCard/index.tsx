@@ -1,10 +1,11 @@
-import { Code, Globe } from 'phosphor-react'
 import {
   BodyProjectCard,
   ImageProjectCard,
   ProjectCardContainer,
   TagsProject,
 } from './styles'
+import { Code, Globe } from 'phosphor-react'
+
 import { Fade } from 'react-awesome-reveal'
 
 interface ProjectCardProps {

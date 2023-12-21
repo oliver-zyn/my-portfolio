@@ -1,25 +1,24 @@
+import { BodyProjects, FilterButton, ProjectsContainer } from './styles'
+
 import { Fade } from 'react-awesome-reveal'
 import { ProjectCard } from '../ProjectCard'
-import { BodyProjects, FilterButton, ProjectsContainer } from './styles'
-import { useState } from 'react'
 import { TitleSection } from '../TitleSection'
+import { useState } from 'react'
 
 export function Projects() {
   const titleProjectsArray = [
     'M',
-    'i',
-    'n',
-    'h',
-    'a',
+    'e',
+    'u',
     's',
     ' ',
-    'c',
+    'P',
     'r',
-    'i',
-    'a',
-    'ç',
-    'õ',
+    'o',
+    'j',
     'e',
+    't',
+    'o',
     's',
   ]
 
@@ -53,6 +52,16 @@ export function Projects() {
       tags: ['react', 'typescript'],
       description:
         'Uma lading page criada para divulgar a o projeto Skal, que visa desenvolver um sistema para venda e controle de ingressos tokenizados.',
+    },
+    {
+      imgUrl:
+        'https://github.com/oliver-zyn/ignite-shop/assets/89222905/4c597ad6-d2e9-4450-b4b8-348abff05949',
+      demoUrl: 'https://todo-list-oliverzyn.netlify.app',
+      codeUrl: 'https://github.com/oliver-zyn/todo-list',
+      title: 'Ignite Shop',
+      tags: ['next', 'typescript'],
+      description:
+        'Projeto criado para resolver um desafio do curso Ignite da rocketseat. O projeto é uma lista de tarefas simples.',
     },
     {
       imgUrl:
@@ -136,38 +145,44 @@ export function Projects() {
     <Fade duration={1000} delay={300} triggerOnce>
       <ProjectsContainer id="projects">
         <TitleSection
-          subtitle="Projetos"
+          subtitle="Criações"
           titleLetterArray={titleProjectsArray}
         />
         <BodyProjects>
           <div className="project-filter">
             <FilterButton
               onClick={() => setselectedFilter('all')}
-              active={selectedFilter === 'all'}
+              $active={selectedFilter === 'all'}
             >
               Todos
             </FilterButton>
             <FilterButton
               onClick={() => setselectedFilter('react')}
-              active={selectedFilter === 'react'}
+              $active={selectedFilter === 'react'}
             >
               React
             </FilterButton>
             <FilterButton
+              onClick={() => setselectedFilter('next')}
+              $active={selectedFilter === 'next'}
+            >
+              Next.js
+            </FilterButton>
+            <FilterButton
               onClick={() => setselectedFilter('tailwind')}
-              active={selectedFilter === 'tailwind'}
+              $active={selectedFilter === 'tailwind'}
             >
               Tailwind
             </FilterButton>
             <FilterButton
               onClick={() => setselectedFilter('node')}
-              active={selectedFilter === 'node'}
+              $active={selectedFilter === 'node'}
             >
               Node.js
             </FilterButton>
             <FilterButton
               onClick={() => setselectedFilter('html/css/js')}
-              active={selectedFilter === 'html/css/js'}
+              $active={selectedFilter === 'html/css/js'}
             >
               Html/Css/Js
             </FilterButton>

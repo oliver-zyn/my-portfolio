@@ -1,6 +1,7 @@
-import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
-import { AboutCard } from '../AboutCard'
 import { AboutContainer, BodyAbout } from './styles'
+import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
+
+import { AboutCard } from '../AboutCard'
 import { Fade } from 'react-awesome-reveal'
 import { TitleSection } from '../TitleSection'
 import profileImg from '../../assets/profile.png'

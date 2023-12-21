@@ -1,5 +1,5 @@
-import { IconProps } from 'phosphor-react'
 import { AboutCardContainer } from './styles'
+import { IconProps } from 'phosphor-react'
 
 interface AboutCardProps {
   icon: IconProps

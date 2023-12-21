@@ -18,4 +18,10 @@ export const TitleSectionContainer = styled.div`
     display: flex;
     margin: auto;
   }
+
+  @media (max-width: 750px) {
+    & > h1 {
+      font-size: 3rem;
+    }
+  }
 `

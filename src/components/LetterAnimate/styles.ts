@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 
 interface LetterContainerProps {
-  isHovered: boolean
+  $hovered: boolean
 }
 
 export const LetterAnimateContainer = styled.span<LetterContainerProps>`
   display: block;
   cursor: default;
   animation: ${(props) =>
-    props.isHovered ? 'rubberband-anim 800ms alternate ease-out' : 'none'};
+    props.$hovered ? 'rubberband-anim 800ms alternate ease-out' : 'none'};
 
   &:hover {
     color: ${(props) => props.theme['light-blue']};
