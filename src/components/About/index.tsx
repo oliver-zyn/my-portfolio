@@ -4,7 +4,7 @@ import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
 import { AboutCard } from '../AboutCard'
 import { Fade } from 'react-awesome-reveal'
 import { TitleSection } from '../TitleSection'
-import profileImg from '../../assets/profile.png'
+import profileImg from '../../assets/profile.jpg'
 
 export function About() {
   const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
@@ -22,17 +22,18 @@ export function About() {
           />
           <div className="aboutTextList">
             <p>
-              Me chamo Oliver, sou um jovem entusiasta na área de tecnologia com
-              pouco mais de 2 anos de experiência. Atualmente sou desenvolvedor
-              na Linx Sponte, colaborando no desenvolvimento de soluções
-              inovadoras para escolas de idiomas.
+              Me chamo Oliver, tenho 18 anos e sou um jovem entusiasta na área
+              de tecnologia com pouco mais de 2 anos de experiência. Atualmente
+              sou desenvolvedor na Linx Sponte, colaborando no desenvolvimento
+              de soluções inovadoras para escolas de idiomas.
             </p>
             <p>
               Sempre em busca de aplicar as melhores práticas de desenvolvimento
               para entregar produtos de qualidade e experiências incríveis.
               Principais tecnologias: <strong>React</strong>,{' '}
-              <strong>Node</strong>, <strong>TailwindCSS</strong>,{' '}
-              <strong>TypeScript</strong> e <strong>.NET</strong>.
+              <strong>Next</strong>, <strong>Node</strong>,{' '}
+              <strong>TailwindCSS</strong>, <strong>TypeScript</strong> e{' '}
+              <strong>.NET</strong>.
             </p>
           </div>
           <div className="aboutCardList">
