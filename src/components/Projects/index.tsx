@@ -35,6 +35,16 @@ export function Projects() {
     },
     {
       imgUrl:
+        'https://github.com/oliver-zyn/aureus-agency/assets/89222905/4b47f43b-c14c-4631-912d-e4a02bfa9440',
+      demoUrl: 'https://aureus-agency.vercel.app',
+      codeUrl: 'https://github.com/oliver-zyn/aureus-agency',
+      title: 'Aureus Agency',
+      tags: ['next', 'typescript', 'tailwind'],
+      description:
+        'Lading page criado para a agência de marketing digital Aureus Agency. A página apresenta a agência, seus serviços e contatos.',
+    },
+    {
+      imgUrl:
         'https://user-images.githubusercontent.com/89222905/242758355-8898e96a-5fc5-462c-a3aa-6756518d44f1.png',
       demoUrl: 'https://auxiliary-codes.netlify.app',
       codeUrl: 'https://github.com/oliver-zyn/auxiliary-codes',
