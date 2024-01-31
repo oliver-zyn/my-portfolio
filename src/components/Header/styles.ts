@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 0 5rem;
+  padding: 2rem 0 5rem;
   opacity: 0;
   animation: onload-title-anim 1s ease forwards;
 
