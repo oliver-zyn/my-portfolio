@@ -24,7 +24,7 @@ export const projects = [
       'https://github.com/oliver-zyn/notezyn/assets/89222905/b06a5e8b-8188-4966-8294-ff2047d21645',
     demoUrl: 'https://notezyn.netlify.app',
     codeUrl: 'https://github.com/oliver-zyn/notezyn',
-    title: 'Auxiliary Codes',
+    title: 'Notezyn',
     tags: ['react', 'typescript', 'tailwind'],
     description:
       'O Notezyn é uma interface simples para criar, editar e excluir notas, com funcionalidades adicionais como download de notas.',
