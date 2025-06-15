@@ -8,7 +8,7 @@ import {
 } from './styles'
 import { Fade } from 'react-awesome-reveal'
 import { TitleSection } from '../TitleSection'
-import { useState, useEffect, FormEvent } from 'react'
+import { useState, useEffect, useCallback, FormEvent } from 'react'
 import { motion } from 'framer-motion'
 import { Check, X, Envelope } from 'phosphor-react'
 
@@ -54,17 +54,17 @@ export function Contact() {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
-  const calculateProgress = () => {
+  const calculateProgress = useCallback(() => {
     let progress = 0
     if (formData.name.length > 2) progress += 33
     if (validateEmail(formData.email)) progress += 33
     if (formData.message.length > 10) progress += 34
     return progress
-  }
+  }, [formData])
 
   useEffect(() => {
     setFormProgress(calculateProgress())
-  }, [formData])
+  }, [calculateProgress])
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }))

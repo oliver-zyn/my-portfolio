@@ -9,21 +9,21 @@ export function SocialLinks() {
         <a
           href="https://github.com/oliver-zyn"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <GithubLogo size={30} />
         </a>
         <a
           href="https://www.linkedin.com/in/oliverzyn/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <LinkedinLogo size={30} />
         </a>
         <a
           href="https://www.instagram.com/oliverzyn_/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           <InstagramLogo size={30} />
         </a>

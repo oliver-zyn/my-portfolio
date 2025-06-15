@@ -34,15 +34,15 @@ export function ProjectCard({
     >
       <ProjectCardContainer tabIndex={0}>
         <ImageProjectCard>
-          <img src={imgUrl} alt={`imagem do projeto ${title}`} />
+          <img loading="lazy" src={imgUrl} alt={`imagem do projeto ${title}`} />
 
           <div className="overlay">
             {demoUrl && (
-              <a href={demoUrl} target="_blank" rel="noreferrer">
+              <a href={demoUrl} target="_blank" rel="noopener noreferrer">
                 <Globe size={20} /> Demo
               </a>
             )}
-            <a href={codeUrl} target="_blank" rel="noreferrer">
+            <a href={codeUrl} target="_blank" rel="noopener noreferrer">
               <Code size={20} /> Code
             </a>
           </div>

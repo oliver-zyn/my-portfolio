@@ -1,4 +1,4 @@
-import { HomeContainer } from './syles'
+import { HomeContainer } from './styles'
 import { Header } from '../../components/Header'
 import { Intro } from '../../components/Intro'
 import { SocialLinks } from '../../components/SocialLinks'
