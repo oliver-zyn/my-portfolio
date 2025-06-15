@@ -1,39 +1,90 @@
-import { ButtonHome, HomeContainer, ImageHome, TitleHome } from './styles'
-
-import { LetterAnimate } from '../LetterAnimate'
+import {
+  ButtonHome,
+  ButtonSecondary,
+  ButtonGroup,
+  HomeContainer,
+  ImageHome,
+  TitleHome,
+} from './styles'
+import { TypewriterEffect } from '../TypewriterEffect'
+import { motion } from 'framer-motion'
+import { RocketLaunch, ChatCircle } from 'phosphor-react'
 
 export function Intro() {
-  const titleIntroArray = ['O', 'l', 'i', 'v', 'e', 'r', 'z', 'y', 'n']
-
   return (
     <HomeContainer>
-      <div>
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
         <TitleHome>
-          <span>Olá, eu sou</span>
+          <motion.span
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            Olá, eu sou
+          </motion.span>
+
           <h1>
-            {titleIntroArray.map((letter, index) => {
-              return <LetterAnimate key={index}>{letter}</LetterAnimate>
-            })}
+            <TypewriterEffect text="Oliverzyn" delay={800} speed={100} />
           </h1>
-          <span>
+
+          <motion.span
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.5 }}
+          >
             Um desenvolvedor frontend focado em transformar ideias em realidade
-            com código e design.
-          </span>
+            com código e design moderno.
+          </motion.span>
         </TitleHome>
-        <ButtonHome href="#projects">Meus Projetos</ButtonHome>
-      </div>
-      <div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 2 }}
+          className="button-group"
+        >
+          <ButtonGroup>
+            <ButtonHome href="#projects">
+              <RocketLaunch size={18} />
+              Ver Projetos
+            </ButtonHome>
+            <ButtonSecondary href="#contact">
+              <ChatCircle size={18} />
+              Vamos Conversar
+            </ButtonSecondary>
+          </ButtonGroup>
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+      >
         <ImageHome>
-          <svg
+          <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="400"
             viewBox="0 0 256 256"
+            whileHover={{
+              scale: 1.05,
+              rotate: 5,
+              filter: 'drop-shadow(0 0 50px #42d3ff)',
+            }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
-            <path
+            <motion.path
               d="M211.89,119.09a4,4,0,0,0-2.49-2.84l-60.81-22.8,15.33-76.67a4,4,0,0,0-6.84-3.51l-112,120a4,4,0,0,0-1,3.64,4,4,0,0,0,2.49,2.84l60.81,22.8L92.08,239.22a4,4,0,0,0,6.84,3.51l112-120A4,4,0,0,0,211.89,119.09ZM102.68,227l13.24-66.2a4,4,0,0,0-2.52-4.53L55,134.36,153.32,29l-13.24,66.2a4,4,0,0,0,2.52,4.53L201,121.64Z"
               fill="url(#gradiente)"
-            ></path>
+              initial={{ pathLength: 0 }}
+              animate={{ pathLength: 1 }}
+              transition={{ duration: 2, delay: 1 }}
+            />
             <defs>
               <linearGradient id="gradiente" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stopColor="#42d3ff"></stop>
@@ -44,9 +95,9 @@ export function Intro() {
                 ></stop>
               </linearGradient>
             </defs>
-          </svg>
+          </motion.svg>
         </ImageHome>
-      </div>
+      </motion.div>
     </HomeContainer>
   )
 }

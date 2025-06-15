@@ -5,8 +5,7 @@ import {
   TagsProject,
 } from './styles'
 import { Code, Globe } from 'phosphor-react'
-
-import { Fade } from 'react-awesome-reveal'
+import { motion } from 'framer-motion'
 
 interface ProjectCardProps {
   imgUrl: string
@@ -26,15 +25,23 @@ export function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <Fade duration={1000} triggerOnce>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      whileHover={{ y: -5 }}
+      layout
+    >
       <ProjectCardContainer tabIndex={0}>
         <ImageProjectCard>
           <img src={imgUrl} alt={`imagem do projeto ${title}`} />
 
-          <div>
-            <a href={demoUrl} target="_blank" rel="noreferrer">
-              <Globe size={20} /> Demo
-            </a>
+          <div className="overlay">
+            {demoUrl && (
+              <a href={demoUrl} target="_blank" rel="noreferrer">
+                <Globe size={20} /> Demo
+              </a>
+            )}
             <a href={codeUrl} target="_blank" rel="noreferrer">
               <Code size={20} /> Code
             </a>
@@ -53,6 +60,6 @@ export function ProjectCard({
           <p>{description}</p>
         </BodyProjectCard>
       </ProjectCardContainer>
-    </Fade>
+    </motion.div>
   )
 }

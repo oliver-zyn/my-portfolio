@@ -21,7 +21,7 @@ export const HomeContainer = styled.section`
 
     & > div:first-child {
       h1,
-      a {
+      .button-group {
         margin: auto;
       }
     }
@@ -42,9 +42,29 @@ export const TitleHome = styled.div`
   }
 
   & > h1 {
-    color: ${(props) => props.theme['text-base']};
+    background: linear-gradient(
+      135deg,
+      ${(props) => props.theme['text-base']},
+      ${(props) => props.theme['light-blue']},
+      #00a8ff
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease-in-out infinite;
     font-size: 5.5rem;
     display: flex;
+  }
+
+  @keyframes gradientAnimation {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
   }
 
   & > span:last-child {
@@ -73,43 +93,11 @@ export const TitleHome = styled.div`
   }
 `
 
-export const ButtonHome = styled.a`
-  max-width: 11rem;
-  background: transparent;
-  border: 1px solid ${(props) => props.theme['light-blue']};
-  color: ${(props) => props.theme['light-blue']};
-  padding: 0.9rem 1.8rem;
-  font-size: 1rem;
-  border-radius: 2px;
-  position: relative;
+export const ButtonGroup = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  font-weight: 500;
-  transition: 0.5s ease;
+  gap: 1rem;
   opacity: 0;
   animation: onload-button-anim 1s 0.5s ease forwards;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: ${(props) => props.theme['light-blue']};
-    transition: 0.5s ease;
-    display: block;
-    right: 300px;
-    z-index: -1;
-  }
-
-  &:is(:hover, :focus)::before {
-    right: 0;
-  }
-
-  &:is(:hover, :focus) {
-    color: ${(props) => props.theme['gray-600']};
-  }
 
   @keyframes onload-button-anim {
     0% {
@@ -119,6 +107,104 @@ export const ButtonHome = styled.a`
     100% {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+`
+
+export const ButtonHome = styled.a`
+  min-width: 11rem;
+  background: linear-gradient(
+    135deg,
+    ${(props) => props.theme['light-blue']},
+    #00a8ff
+  );
+  border: none;
+  color: ${(props) => props.theme['gray-700']};
+  padding: 1.2rem 2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00a8ff, #0080cc);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+  }
+
+  &:is(:hover, :focus) {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(66, 211, 255, 0.4);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+`
+
+export const ButtonSecondary = styled.a`
+  min-width: 11rem;
+  background: transparent;
+  border: 2px solid ${(props) => props.theme['light-blue']};
+  color: ${(props) => props.theme['light-blue']};
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(10px);
+  background: rgba(66, 211, 255, 0.05);
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      ${(props) => props.theme['light-blue']},
+      #00a8ff
+    );
+    transition: all 0.3s ease;
+    display: block;
+    transform: translateY(100%);
+    z-index: -1;
+  }
+
+  &:is(:hover, :focus) {
+    color: ${(props) => props.theme['gray-700']};
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(66, 211, 255, 0.3);
+
+    &::before {
+      transform: translateY(0);
     }
   }
 `

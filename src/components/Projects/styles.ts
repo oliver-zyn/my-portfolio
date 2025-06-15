@@ -8,11 +8,15 @@ export const ProjectsContainer = styled.section`
 export const BodyProjects = styled.div`
   div.project-filter {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 3rem 0 4rem;
-    gap: 3rem;
+    gap: 1rem;
+    background: rgba(24, 24, 26, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(66, 211, 255, 0.1);
   }
 
   div.project-list {
@@ -20,6 +24,8 @@ export const BodyProjects = styled.div`
     justify-items: center;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
+    margin-top: 3rem;
+    /* Removido transition problemático */
   }
 `
 
@@ -29,22 +35,130 @@ interface FilterButtonProps {
 
 export const FilterButton = styled.button<FilterButtonProps>`
   all: unset;
-  width: 5.6rem;
+  min-width: 5.6rem;
   text-align: center;
-  border-radius: 2px;
-  padding: 0.7rem 1.7rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.24);
-  background: ${(props) => props.theme['gray-600']};
+  border-radius: 12px;
+  padding: 0.8rem 1.8rem;
+  background: ${(props) =>
+    props.$active
+      ? 'linear-gradient(135deg, rgba(66, 211, 255, 0.2), rgba(0, 168, 255, 0.1))'
+      : 'rgba(24, 24, 26, 0.6)'};
+  backdrop-filter: blur(10px);
   color: ${(props) =>
-    props.$active ? props.theme['text-base'] : props.theme['gray-100']};
-  border-bottom: 1px solid
+    props.$active ? props.theme['light-blue'] : props.theme['gray-100']};
+  border: 1px solid
     ${(props) =>
-      props.$active ? props.theme['light-blue'] : props.theme['gray-600']};
+      props.$active ? props.theme['light-blue'] : 'rgba(66, 211, 255, 0.2)'};
   cursor: pointer;
+  transition: all 0.2s ease; /* Reduzido tempo de transição */
+  font-weight: ${(props) => (props.$active ? '600' : '400')};
+  position: relative;
+  overflow: hidden;
 
-  transition: color 0.2s, border-color 0.2s;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(66, 211, 255, 0.1),
+      rgba(0, 168, 255, 0.05)
+    );
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    z-index: -1;
+  }
 
-  &:is(:hover, :focus) {
+  &:is(:hover, :focus):not(:disabled) {
     color: ${(props) => props.theme['text-base']};
+    border-color: ${(props) => props.theme['light-blue']};
+    transform: translateY(-1px); /* Reduzido movimento */
+    box-shadow: 0 4px 15px rgba(66, 211, 255, 0.2); /* Reduzido shadow */
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  ${(props) =>
+    props.$active &&
+    `
+    box-shadow: 0 4px 15px rgba(66, 211, 255, 0.3);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 2px;
+      background: linear-gradient(90deg, ${props.theme['light-blue']}, #00a8ff);
+      border-radius: 1px;
+    }
+  `}
+
+  @media (max-width: 768px) {
+    min-width: 4.5rem;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.9rem;
+  }
+`
+
+export const ProjectsHeader = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .projects-subtitle {
+    color: ${(props) => props.theme['gray-100']};
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .projects-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    .stat-item {
+      text-align: center;
+
+      .stat-number {
+        font-size: 2rem;
+        font-weight: 700;
+        background: linear-gradient(
+          135deg,
+          ${(props) => props.theme['text-base']},
+          ${(props) => props.theme['light-blue']}
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .stat-label {
+        color: ${(props) => props.theme['gray-100']};
+        font-size: 0.9rem;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .projects-stats {
+      gap: 1rem;
+
+      .stat-number {
+        font-size: 1.5rem;
+      }
+    }
   }
 `
