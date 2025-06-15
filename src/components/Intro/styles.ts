@@ -20,6 +20,8 @@ export const HomeContainer = styled.section`
     text-align: center;
 
     & > div:first-child {
+      width: 100%;
+
       h1,
       .button-group {
         margin: auto;
@@ -61,8 +63,16 @@ export const TitleHome = styled.div`
   }
 
   @media (max-width: 750px) {
-    & > h1 {
-      font-size: 5rem;
+    align-items: center;
+
+    & > span:first-child {
+      font-size: 2rem;
+    }
+
+    & > span:last-child {
+      text-align: center;
+      max-width: 32.5rem;
+      padding: 1.2rem 0 1.5rem;
     }
   }
 `
@@ -84,6 +94,7 @@ export const TypewriterName = styled.h1`
   white-space: nowrap;
   width: 0;
   margin: 0;
+  justify-content: flex-start;
 
   animation: typing 2s steps(9, end) 0.8s forwards,
     blink-caret 1s step-end 0.8s 3, gradientAnimation 3s ease-in-out 2s infinite;
@@ -134,8 +145,32 @@ export const TypewriterName = styled.h1`
   }
 
   @media (max-width: 750px) {
-    font-size: 5rem;
-    max-width: 28rem;
+    font-size: 5.5rem;
+    justify-content: center;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+        max-width: 27rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    font-size: 4.8rem;
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+        max-width: 27rem;
+      }
+    }
   }
 `
 
@@ -156,7 +191,7 @@ export const ButtonGroup = styled.div`
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 750px) {
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;

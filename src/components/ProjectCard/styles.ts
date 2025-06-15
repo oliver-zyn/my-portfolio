@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 export const ProjectCardContainer = styled.div`
   border-radius: 16px;
   overflow: hidden;
-  height: 415px;
+  height: 430px;
   max-width: 348px;
 
   background: rgba(24, 24, 26, 0.4);
