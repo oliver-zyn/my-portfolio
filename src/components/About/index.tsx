@@ -13,7 +13,7 @@ export function About() {
     <Fade duration={1000} delay={300} triggerOnce>
       <AboutContainer id="about" className="about-section">
         <div className="profileImg">
-          <img src={profileImg} alt="Imagem de Oliver" />
+          <img loading="lazy" src={profileImg} alt="Imagem de Oliver" />
         </div>
 
         <BodyAbout>
