@@ -71,7 +71,7 @@ export const TitleHome = styled.div`
 
     & > span:last-child {
       text-align: center;
-      max-width: 32.5rem;
+      max-width: 100%;
       padding: 1.2rem 0 1.5rem;
     }
   }
@@ -145,7 +145,7 @@ export const TypewriterName = styled.h1`
   }
 
   @media (max-width: 750px) {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     justify-content: center;
 
     @keyframes typing {
@@ -154,7 +154,7 @@ export const TypewriterName = styled.h1`
       }
       to {
         width: 100%;
-        max-width: 27rem;
+        max-width: 100%;
       }
     }
   }
@@ -168,7 +168,7 @@ export const TypewriterName = styled.h1`
       }
       to {
         width: 100%;
-        max-width: 27rem;
+        max-width: 100%;
       }
     }
   }
@@ -191,7 +191,7 @@ export const ButtonGroup = styled.div`
     }
   }
 
-  @media (max-width: 750px) {
+  @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
