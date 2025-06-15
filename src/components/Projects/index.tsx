@@ -119,9 +119,9 @@ export function Projects() {
           </motion.div>
 
           <div className="project-list">
-            {displayedProjects.map((project, index) => (
+            {displayedProjects.map((project) => (
               <ProjectCard
-                key={`${selectedFilter}-${project.title}`} // Key única para cada filtro
+                key={`${selectedFilter}-${project.title}`}
                 imgUrl={project.imgUrl}
                 codeUrl={project.codeUrl}
                 demoUrl={project.demoUrl}

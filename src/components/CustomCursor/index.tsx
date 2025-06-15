@@ -69,13 +69,10 @@ export function CustomCursor() {
     const handleMouseEnter = () => setIsHovering(true)
     const handleMouseLeave = () => setIsHovering(false)
 
-    // Add cursor styles to body
     document.body.style.cursor = 'none'
 
-    // Track mouse movement
     window.addEventListener('mousemove', updateMousePosition)
 
-    // Track hover on interactive elements
     const interactiveElements = document.querySelectorAll(
       'a, button, [role="button"]',
     )

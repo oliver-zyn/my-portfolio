@@ -76,7 +76,7 @@ export function Blog() {
                   </div>
 
                   <a
-                    href="https://dev.to/oliverzyn" // Substitua pelos links reais após publicar
+                    href="https://dev.to/oliverzyn"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="read-more"
