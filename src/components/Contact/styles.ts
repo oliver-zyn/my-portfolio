@@ -28,7 +28,7 @@ export const BodyContact = styled.div`
       background: rgba(24, 24, 26, 0.8);
       backdrop-filter: blur(15px);
       padding: 1.2rem;
-      padding-right: 3.5rem; /* Espaço para o ícone */
+      padding-right: 3.5rem;
       border: 1px solid rgba(66, 211, 255, 0.2);
       border-radius: 12px;
       transition: all 0.3s ease;
@@ -66,76 +66,51 @@ export const BodyContact = styled.div`
     }
 
     button {
-      all: unset;
-      min-width: 12rem;
-      max-width: 14rem;
-      align-self: center;
-      background: linear-gradient(
-        135deg,
-        ${(props) => props.theme['light-blue']},
-        #00a8ff
-      );
-      color: ${(props) => props.theme['gray-700']};
-      padding: 1.2rem 2rem;
+      min-width: 11rem;
+      max-width: 20rem;
+      background: transparent;
+      border: 2px solid ${(props) => props.theme['light-blue']};
+      color: ${(props) => props.theme['light-blue']};
+      padding: 1.1rem 2rem;
       font-size: 1rem;
       border-radius: 12px;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: auto;
       gap: 0.5rem;
       overflow: hidden;
       font-weight: 600;
       transition: all 0.3s ease;
-      cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 1px;
+      backdrop-filter: blur(10px);
+      background: rgba(66, 211, 255, 0.05);
 
       &::before {
         content: '';
         position: absolute;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #00a8ff, #0080cc);
-        opacity: 0;
-        transition: opacity 0.3s ease;
+        background: linear-gradient(
+          135deg,
+          ${(props) => props.theme['light-blue']},
+          #00a8ff
+        );
+        transition: all 0.3s ease;
+        display: block;
+        transform: translateY(100%);
         z-index: -1;
       }
 
-      &:is(:hover, :focus):not(:disabled) {
-        transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(66, 211, 255, 0.4);
+      &:is(:hover, :focus) {
+        color: ${(props) => props.theme['gray-700']};
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(66, 211, 255, 0.3);
 
         &::before {
-          opacity: 1;
-        }
-      }
-
-      &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-        transform: none !important;
-
-        &:hover::before {
-          opacity: 0;
-        }
-      }
-
-      .spinner {
-        width: 16px;
-        height: 16px;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        border-top: 2px solid white;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
+          transform: translateY(0);
         }
       }
     }
@@ -143,6 +118,7 @@ export const BodyContact = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 1rem;
+    padding-top: 2rem;
 
     form {
       gap: 1.2rem;
@@ -205,9 +181,9 @@ export const FormProgressBar = styled.div`
   margin-bottom: 1rem;
 `
 
-export const FormProgress = styled.div<{ progress: number }>`
+export const FormProgress = styled.div<{ $progress: number }>`
   height: 100%;
-  width: ${(props) => props.progress}%;
+  width: ${(props) => props.$progress}%;
   background: linear-gradient(
     90deg,
     ${(props) => props.theme['light-blue']},
@@ -243,7 +219,6 @@ export const InputWrapper = styled.div`
     opacity: 1;
   }
 
-  /* Para textarea, posicionar o ícone no topo */
   textarea + .input-icon {
     top: 1.5rem;
     transform: none;

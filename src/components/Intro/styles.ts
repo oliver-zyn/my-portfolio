@@ -41,32 +41,6 @@ export const TitleHome = styled.div`
     text-shadow: 0px 0px 16px rgba(66, 211, 255, 0.25);
   }
 
-  & > h1 {
-    background: linear-gradient(
-      135deg,
-      ${(props) => props.theme['text-base']},
-      ${(props) => props.theme['light-blue']},
-      #00a8ff
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200% 200%;
-    animation: gradientAnimation 3s ease-in-out infinite;
-    font-size: 5.5rem;
-    display: flex;
-  }
-
-  @keyframes gradientAnimation {
-    0%,
-    100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-
   & > span:last-child {
     color: ${(props) => props.theme['gray-100']};
     font-size: 1.1rem;
@@ -90,6 +64,78 @@ export const TitleHome = styled.div`
     & > h1 {
       font-size: 5rem;
     }
+  }
+`
+
+export const TypewriterName = styled.h1`
+  background: linear-gradient(
+    135deg,
+    ${(props) => props.theme['text-base']},
+    ${(props) => props.theme['light-blue']},
+    #00a8ff
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  font-size: 5.5rem;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  margin: 0;
+
+  animation: typing 2s steps(9, end) 0.8s forwards,
+    blink-caret 1s step-end 0.8s 3, gradientAnimation 3s ease-in-out 2s infinite;
+
+  border-right: 3px solid ${(props) => props.theme['light-blue']};
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+      max-width: 27rem;
+    }
+  }
+
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: ${(props) => props.theme['light-blue']};
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  animation-fill-mode: forwards;
+
+  &::after {
+    content: '';
+    animation: removeBorder 0.1s 3s forwards;
+  }
+
+  @keyframes removeBorder {
+    to {
+      border-right: none;
+    }
+  }
+
+  @media (max-width: 750px) {
+    font-size: 5rem;
+    max-width: 28rem;
   }
 `
 
@@ -118,50 +164,6 @@ export const ButtonGroup = styled.div`
 `
 
 export const ButtonHome = styled.a`
-  min-width: 11rem;
-  background: linear-gradient(
-    135deg,
-    ${(props) => props.theme['light-blue']},
-    #00a8ff
-  );
-  border: none;
-  color: ${(props) => props.theme['gray-700']};
-  padding: 1.2rem 2rem;
-  font-size: 1rem;
-  border-radius: 12px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  overflow: hidden;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  &::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #00a8ff, #0080cc);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-  }
-
-  &:is(:hover, :focus) {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(66, 211, 255, 0.4);
-
-    &::before {
-      opacity: 1;
-    }
-  }
-`
-
-export const ButtonSecondary = styled.a`
   min-width: 11rem;
   background: transparent;
   border: 2px solid ${(props) => props.theme['light-blue']};

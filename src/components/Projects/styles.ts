@@ -11,7 +11,7 @@ export const BodyProjects = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 3rem 0 4rem;
+    padding: 3rem 0;
     gap: 1rem;
     background: rgba(24, 24, 26, 0.3);
     backdrop-filter: blur(10px);
@@ -25,7 +25,6 @@ export const BodyProjects = styled.div`
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(321px, 1fr));
     margin-top: 3rem;
-    /* Removido transition problemático */
   }
 `
 
@@ -50,7 +49,7 @@ export const FilterButton = styled.button<FilterButtonProps>`
     ${(props) =>
       props.$active ? props.theme['light-blue'] : 'rgba(66, 211, 255, 0.2)'};
   cursor: pointer;
-  transition: all 0.2s ease; /* Reduzido tempo de transição */
+  transition: all 0.2s ease;
   font-weight: ${(props) => (props.$active ? '600' : '400')};
   position: relative;
   overflow: hidden;
@@ -75,8 +74,8 @@ export const FilterButton = styled.button<FilterButtonProps>`
   &:is(:hover, :focus):not(:disabled) {
     color: ${(props) => props.theme['text-base']};
     border-color: ${(props) => props.theme['light-blue']};
-    transform: translateY(-1px); /* Reduzido movimento */
-    box-shadow: 0 4px 15px rgba(66, 211, 255, 0.2); /* Reduzido shadow */
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(66, 211, 255, 0.2);
 
     &::before {
       opacity: 1;

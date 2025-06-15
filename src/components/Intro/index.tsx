@@ -1,14 +1,13 @@
 import {
   ButtonHome,
-  ButtonSecondary,
   ButtonGroup,
   HomeContainer,
   ImageHome,
   TitleHome,
+  TypewriterName,
 } from './styles'
-import { TypewriterEffect } from '../TypewriterEffect'
 import { motion } from 'framer-motion'
-import { RocketLaunch, ChatCircle } from 'phosphor-react'
+import { RocketLaunch } from 'phosphor-react'
 
 export function Intro() {
   return (
@@ -27,14 +26,12 @@ export function Intro() {
             Olá, eu sou
           </motion.span>
 
-          <h1>
-            <TypewriterEffect text="Oliverzyn" delay={800} speed={100} />
-          </h1>
+          <TypewriterName>Oliverzyn</TypewriterName>
 
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
+            transition={{ duration: 0.6, delay: 2.5 }}
           >
             Um desenvolvedor frontend focado em transformar ideias em realidade
             com código e design moderno.
@@ -44,7 +41,7 @@ export function Intro() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2 }}
+          transition={{ duration: 0.6, delay: 3 }}
           className="button-group"
         >
           <ButtonGroup>
@@ -52,10 +49,6 @@ export function Intro() {
               <RocketLaunch size={18} />
               Ver Projetos
             </ButtonHome>
-            <ButtonSecondary href="#contact">
-              <ChatCircle size={18} />
-              Vamos Conversar
-            </ButtonSecondary>
           </ButtonGroup>
         </motion.div>
       </motion.div>

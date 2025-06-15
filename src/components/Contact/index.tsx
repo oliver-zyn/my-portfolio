@@ -144,12 +144,10 @@ export function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            {/* Progress Bar */}
             <FormProgressBar>
-              <FormProgress progress={formProgress} />
+              <FormProgress $progress={formProgress} />
             </FormProgressBar>
 
-            {/* Campo Nome */}
             <InputWrapper>
               <input
                 type="text"
@@ -162,7 +160,6 @@ export function Contact() {
               {getInputIcon('name')}
             </InputWrapper>
 
-            {/* Campo Email */}
             <InputWrapper>
               <input
                 type="email"
@@ -175,7 +172,6 @@ export function Contact() {
               {getInputIcon('email')}
             </InputWrapper>
 
-            {/* Campo Mensagem */}
             <InputWrapper>
               <textarea
                 name="message"
@@ -189,14 +185,12 @@ export function Contact() {
               {getInputIcon('message')}
             </InputWrapper>
 
-            {/* Status Message */}
             {formStatus.type && (
               <StatusMessage type={formStatus.type}>
                 {formStatus.message}
               </StatusMessage>
             )}
 
-            {/* Submit Button */}
             <motion.button
               type="submit"
               disabled={isSubmitting || formProgress < 100}

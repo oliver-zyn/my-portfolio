@@ -80,7 +80,6 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
 
-  /* Custom Scrollbar with gradient */
   ::-webkit-scrollbar {
     width: 8px;
   }
@@ -103,18 +102,15 @@ export const GlobalStyle = createGlobalStyle`
       props.theme['light-blue']});
   }
 
-  /* Selection with gradient */
   ::selection {
     background: linear-gradient(135deg, rgba(66, 211, 255, 0.3), rgba(0, 168, 255, 0.3));
     color: ${(props) => props.theme['text-base']};
   }
 
-  /* Smooth animations */
   * {
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   }
 
-  /* Loading animation for images */
   img {
     transition: opacity 0.3s ease;
   }
@@ -130,7 +126,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  /* Pulse animation utility */
   .pulse {
     animation: pulseGlow 2s infinite;
   }
@@ -144,7 +139,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  /* Gradient text utility */
   .text-gradient {
     background: linear-gradient(135deg, ${(props) =>
       props.theme['text-base']}, ${(props) => props.theme['light-blue']});
@@ -153,7 +147,6 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-text-fill-color: transparent;
   }
 
-  /* Gradient button utility */
   .gradient-button {
     background: linear-gradient(135deg, ${(props) =>
       props.theme['light-blue']}, #00a8ff);
@@ -168,7 +161,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  /* Loading spinner */
   .spinner {
     width: 20px;
     height: 20px;
@@ -183,7 +175,6 @@ export const GlobalStyle = createGlobalStyle`
     100% { transform: rotate(360deg); }
   }
 
-  /* Responsive typography */
   @media (max-width: 900px) {
     html {
       font-size: 87.5%;
@@ -196,7 +187,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  /* Progress bar at top */
   .scroll-progress {
     position: fixed;
     top: 0;
