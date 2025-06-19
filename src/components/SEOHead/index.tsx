@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async'
 export function SEOHead() {
   const siteTitle = 'Oliver Mayer | Desenvolvedor Frontend'
   const siteDescription =
-    'Desenvolvedor frontend especializado em React, Next.js e TypeScript. Criando experiências digitais incríveis com mais de 2 anos de experiência.'
+    'Desenvolvedor frontend especializado em React, Next.js e TypeScript. Criando experiências digitais incríveis com mais de 3 anos de experiência.'
   const siteUrl = 'https://oliver-portfolio.com'
   const author = 'Oliver Mayer'
 
