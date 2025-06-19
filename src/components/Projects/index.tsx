@@ -1,6 +1,8 @@
 import {
   BodyProjects,
   FilterButton,
+  FilterToggleButton,
+  FilterList,
   ProjectsContainer,
   ProjectsHeader,
 } from './styles'
@@ -11,6 +13,7 @@ import { TitleSection } from '../TitleSection'
 import { useState } from 'react'
 import { projects } from '../../utils/projetcsData'
 import { motion } from 'framer-motion'
+import { FunnelSimple, CaretDown } from 'phosphor-react'
 
 export function Projects() {
   const titleProjectsArray = [
@@ -30,6 +33,7 @@ export function Projects() {
   ]
 
   const [selectedFilter, setselectedFilter] = useState('all')
+  const [isFilterExpanded, setIsFilterExpanded] = useState(false)
 
   const projectsFilter = projects.filter((project) =>
     project.tags.includes(selectedFilter),
@@ -41,6 +45,30 @@ export function Projects() {
   }
 
   const displayedProjects = selectedFilter === 'all' ? projects : projectsFilter
+
+  const getCurrentFilterName = () => {
+    switch (selectedFilter) {
+      case 'all':
+        return 'Todos os projetos'
+      case 'react':
+        return 'Projetos React'
+      case 'next':
+        return 'Projetos Next.js'
+      case 'tailwind':
+        return 'Projetos Tailwind'
+      case 'node':
+        return 'Projetos Node.js'
+      case 'html/css/js':
+        return 'Projetos Html/Css/Js'
+      default:
+        return 'Todos os projetos'
+    }
+  }
+
+  const handleFilterChange = (filter: string) => {
+    setselectedFilter(filter)
+    setIsFilterExpanded(false)
+  }
 
   return (
     <Fade duration={1000} delay={300} triggerOnce>
@@ -76,46 +104,69 @@ export function Projects() {
           <motion.div
             className="project-filter"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ y: -5 }}
+            layout
           >
-            <FilterButton
-              onClick={() => setselectedFilter('all')}
-              $active={selectedFilter === 'all'}
+            <FilterToggleButton
+              $isExpanded={isFilterExpanded}
+              onClick={() => setIsFilterExpanded(!isFilterExpanded)}
             >
-              Todos ({projects.length})
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('react')}
-              $active={selectedFilter === 'react'}
-            >
-              React ({getProjectCount('react')})
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('next')}
-              $active={selectedFilter === 'next'}
-            >
-              Next.js ({getProjectCount('next')})
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('tailwind')}
-              $active={selectedFilter === 'tailwind'}
-            >
-              Tailwind ({getProjectCount('tailwind')})
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('node')}
-              $active={selectedFilter === 'node'}
-            >
-              Node.js ({getProjectCount('node')})
-            </FilterButton>
-            <FilterButton
-              onClick={() => setselectedFilter('html/css/js')}
-              $active={selectedFilter === 'html/css/js'}
-            >
-              Html/Css/Js ({getProjectCount('html/css/js')})
-            </FilterButton>
+              <div className="toggle-content">
+                <div className="filter-icon">
+                  <FunnelSimple size={16} />
+                </div>
+                <div className="filter-text">
+                  <span className="main-text">{getCurrentFilterName()}</span>
+                  <span className="count-text">
+                    {displayedProjects.length} projeto(s) realizado(s)
+                  </span>
+                </div>
+              </div>
+              <CaretDown className="chevron" size={20} />
+            </FilterToggleButton>
+
+            <FilterList $isExpanded={isFilterExpanded}>
+              <div className="filter-buttons">
+                <FilterButton
+                  onClick={() => handleFilterChange('all')}
+                  $active={selectedFilter === 'all'}
+                >
+                  Todos ({projects.length})
+                </FilterButton>
+                <FilterButton
+                  onClick={() => handleFilterChange('react')}
+                  $active={selectedFilter === 'react'}
+                >
+                  React ({getProjectCount('react')})
+                </FilterButton>
+                <FilterButton
+                  onClick={() => handleFilterChange('next')}
+                  $active={selectedFilter === 'next'}
+                >
+                  Next.js ({getProjectCount('next')})
+                </FilterButton>
+                <FilterButton
+                  onClick={() => handleFilterChange('tailwind')}
+                  $active={selectedFilter === 'tailwind'}
+                >
+                  Tailwind ({getProjectCount('tailwind')})
+                </FilterButton>
+                <FilterButton
+                  onClick={() => handleFilterChange('node')}
+                  $active={selectedFilter === 'node'}
+                >
+                  Node.js ({getProjectCount('node')})
+                </FilterButton>
+                <FilterButton
+                  onClick={() => handleFilterChange('html/css/js')}
+                  $active={selectedFilter === 'html/css/js'}
+                >
+                  Html/Css/Js ({getProjectCount('html/css/js')})
+                </FilterButton>
+              </div>
+            </FilterList>
           </motion.div>
 
           <div className="project-list">
