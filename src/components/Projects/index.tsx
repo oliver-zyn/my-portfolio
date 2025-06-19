@@ -66,7 +66,7 @@ export function Projects() {
               <div className="stat-label">Tecnologias</div>
             </div>
             <div className="stat-item">
-              <div className="stat-number">2+</div>
+              <div className="stat-number">3+</div>
               <div className="stat-label">Anos</div>
             </div>
           </div>

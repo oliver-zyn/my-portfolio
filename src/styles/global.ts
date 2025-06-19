@@ -175,18 +175,6 @@ export const GlobalStyle = createGlobalStyle`
     100% { transform: rotate(360deg); }
   }
 
-  @media (max-width: 900px) {
-    html {
-      font-size: 87.5%;
-    }
-  }
-
-  @media (max-width: 600px) {
-    html {
-      font-size: 81.25%;
-    }
-  }
-
   .scroll-progress {
     position: fixed;
     top: 0;

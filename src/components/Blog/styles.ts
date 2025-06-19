@@ -23,6 +23,7 @@ export const BlogCard = styled.article`
   cursor: pointer;
   height: 100%;
   min-height: 280px;
+  max-width: 530px;
   display: flex;
   flex-direction: column;
 

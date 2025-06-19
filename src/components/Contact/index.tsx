@@ -79,7 +79,7 @@ export function Contact() {
     const formDataToSend = new FormData(form)
 
     try {
-      const response = await fetch('https://formspree.io/f/mgvyyazy', {
+      const response = await fetch(import.meta.env.VITE_FORM_SPREE_URL!, {
         method: 'POST',
         body: formDataToSend,
         headers: {
@@ -91,7 +91,7 @@ export function Contact() {
         setFormStatus({
           type: 'success',
           message:
-            '🎉 Mensagem enviada com sucesso! Entrarei em contato em breve.',
+            'Mensagem enviada com sucesso! Entrarei em contato em breve.',
         })
         setFormData({ name: '', email: '', message: '' })
         form.reset()
@@ -102,7 +102,7 @@ export function Contact() {
       setFormStatus({
         type: 'error',
         message:
-          '❌ Erro ao enviar mensagem. Tente novamente ou entre em contato pelo LinkedIn.',
+          'Erro ao enviar mensagem. Tente novamente ou entre em contato pelo LinkedIn.',
       })
     } finally {
       setIsSubmitting(false)

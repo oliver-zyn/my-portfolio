@@ -61,13 +61,13 @@ export const projects = [
   },
   {
     imgUrl:
-      'https://user-images.githubusercontent.com/89222905/251605876-8c95def4-7902-4650-bd3f-e785590268ee.png',
-    demoUrl: 'https://notion-react-oliverzyn.netlify.app',
-    codeUrl: 'https://github.com/oliver-zyn/notion-react',
-    title: 'Notion React',
+      'https://github.com/user-attachments/assets/ac11cc35-95dc-4fb3-bf1e-6c605523114a',
+    demoUrl: 'https://data-defender.netlify.app',
+    codeUrl: 'https://github.com/oliver-zyn/metadefender',
+    title: 'MetaDefender',
     tags: ['react', 'typescript', 'tailwind'],
     description:
-      'Projeto criado para simular a interface e alguns funcionamentos básicos da ferramenta Notion.',
+      'O MetaDefender analisa e remove metadados de imagens e PDFs. Suporta análise EXIF, remoção segura e geração de certificados digitais.',
   },
   {
     imgUrl:

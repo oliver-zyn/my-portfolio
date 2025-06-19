@@ -11,7 +11,7 @@ export const BodyProjects = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 3rem 0;
+    padding: 3rem;
     gap: 1rem;
     background: rgba(24, 24, 26, 0.3);
     backdrop-filter: blur(10px);
