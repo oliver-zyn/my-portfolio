@@ -1,7 +1,7 @@
 import { BlogContainer, BlogCard, BlogGrid } from './styles'
 import { TitleSection } from '../TitleSection'
 import { motion } from 'framer-motion'
-import { Fade } from 'react-awesome-reveal'
+import { Reveal } from '../Reveal'
 import { useEffect, useState } from 'react'
 
 type BlogPost = {
@@ -41,7 +41,7 @@ export function Blog() {
   }, [])
 
   return (
-    <Fade duration={1000} delay={300} triggerOnce>
+    <Reveal>
       <BlogContainer id="blog">
         <TitleSection subtitle="Insights" titleLetterArray={titleBlogArray} />
 
@@ -87,6 +87,6 @@ export function Blog() {
           ))}
         </BlogGrid>
       </BlogContainer>
-    </Fade>
+    </Reveal>
   )
 }

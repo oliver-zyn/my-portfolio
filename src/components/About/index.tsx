@@ -2,7 +2,7 @@ import { AboutContainer, BodyAbout } from './styles'
 import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
 
 import { AboutCard } from '../AboutCard'
-import { Fade } from 'react-awesome-reveal'
+import { Reveal } from '../Reveal'
 import { TitleSection } from '../TitleSection'
 import profileImg from '../../assets/profile.jpg'
 
@@ -10,7 +10,7 @@ export function About() {
   const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']
 
   return (
-    <Fade duration={1000} delay={300} triggerOnce>
+    <Reveal>
       <AboutContainer id="about" className="about-section">
         <div className="profileImg">
           <img loading="lazy" src={profileImg} alt="Imagem de Oliver" />
@@ -63,6 +63,6 @@ export function About() {
           </div>
         </BodyAbout>
       </AboutContainer>
-    </Fade>
+    </Reveal>
   )
 }
