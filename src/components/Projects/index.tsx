@@ -7,7 +7,7 @@ import {
   ProjectsHeader,
 } from './styles'
 
-import { Fade } from 'react-awesome-reveal'
+import { Reveal } from '../Reveal'
 import { ProjectCard } from '../ProjectCard'
 import { TitleSection } from '../TitleSection'
 import { useState } from 'react'
@@ -71,7 +71,7 @@ export function Projects() {
   }
 
   return (
-    <Fade duration={1000} delay={300} triggerOnce>
+    <Reveal>
       <ProjectsContainer id="projects">
         <TitleSection
           subtitle="Criações"
@@ -184,6 +184,6 @@ export function Projects() {
           </div>
         </BodyProjects>
       </ProjectsContainer>
-    </Fade>
+    </Reveal>
   )
 }

@@ -6,7 +6,7 @@ import {
   FormProgress,
   InputWrapper,
 } from './styles'
-import { Fade } from 'react-awesome-reveal'
+import { Reveal } from '../Reveal'
 import { TitleSection } from '../TitleSection'
 import { useState, useEffect, useCallback, FormEvent } from 'react'
 import { motion } from 'framer-motion'
@@ -130,7 +130,7 @@ export function Contact() {
   }
 
   return (
-    <Fade duration={1000} delay={300} triggerOnce>
+    <Reveal>
       <ContactContainer id="contact">
         <TitleSection
           subtitle="Contatos"
@@ -213,6 +213,6 @@ export function Contact() {
           </motion.form>
         </BodyContact>
       </ContactContainer>
-    </Fade>
+    </Reveal>
   )
 }
