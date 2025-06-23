@@ -23,7 +23,7 @@ Meu portfolio pessoal. O site apresenta uma interface moderna com glassmorphism,
 ## ⚒️ Features
 
 - **Design Moderno**: Interface com glassmorphism e efeitos visuais avançados
-- **Animações Fluídas**: Transições suaves usando Framer Motion e GSAP
+- **Animações Fluídas**: Transições suaves usando Framer Motion
 - **Responsividade Completa**: Experiência otimizada para desktop, tablet e mobile
 - **Seção Sobre**: Apresentação pessoal com habilidades e competências
 - **Portfolio de Projetos**: Showcase interativo com filtros por tecnologia
@@ -31,7 +31,6 @@ Meu portfolio pessoal. O site apresenta uma interface moderna com glassmorphism,
 - **Formulário de Contato**: Sistema funcional com validação e feedback
 - **SEO Otimizado**: Meta tags e structured data para melhor indexação
 - **Performance**: Carregamento rápido e otimizações de imagem
-- **Acessibilidade**: Navegação por teclado e contraste adequado
 
 ## ⚙️ Executando o projeto
 
