@@ -27,21 +27,25 @@ export function About() {
           <div className="aboutTextList">
             <div className="text-card">
               <p>
-                Me chamo Oliver, tenho 19 anos e sou um jovem entusiasta na área
-                de tecnologia com pouco mais de 3 anos de experiência.
-                Atualmente sou desenvolvedor na Linx Sponte, colaborando no
-                desenvolvimento de soluções inovadoras para escolas de idiomas.
+                Me chamo Oliver, tenho 19 anos e sou um desenvolvedor Fullstack
+                com 3+ anos de experiência profissional em desenvolvimento de
+                sistemas e integrações robustas. Atualmente na Sponte, trabalho
+                no desenvolvimento e manutenção de sistemas ERP, implementando
+                melhorias em integrações com múltiplos gateways de pagamento e
+                desenvolvendo soluções que processam transações de forma
+                confiável e escalável.
               </p>
             </div>
 
             <div className="text-card">
               <p>
-                Sempre em busca de aplicar as melhores práticas de
-                desenvolvimento para entregar produtos de qualidade e
-                experiências incríveis. Principais tecnologias:{' '}
-                <strong>React</strong>, <strong>Next</strong>,{' '}
-                <strong>Node</strong>, <strong>TailwindCSS</strong>,{' '}
-                <strong>TypeScript</strong> e <strong>.NET</strong>.
+                Ao longo dos últimos três anos, tive a oportunidade de trabalhar
+                com <strong>VB.NET</strong>, <strong>C#</strong>,{' '}
+                <strong>ASP.NET</strong>, <strong>React</strong>,{' '}
+                <strong>SQL Server</strong>, <strong>Azure DevOps</strong> e{' '}
+                <strong>Jenkins</strong>. Atualmente, venho expandindo minha
+                expertise em <strong>Next.js</strong>, <strong>Node.js</strong>{' '}
+                e <strong>TypeScript</strong> por meio de projetos pessoais.
               </p>
             </div>
           </div>

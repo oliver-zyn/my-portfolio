@@ -39,11 +39,6 @@ export function Projects() {
     project.tags.includes(selectedFilter),
   )
 
-  const getProjectCount = (filter: string) => {
-    if (filter === 'all') return projects.length
-    return projects.filter((project) => project.tags.includes(filter)).length
-  }
-
   const displayedProjects = selectedFilter === 'all' ? projects : projectsFilter
 
   const getCurrentFilterName = () => {
@@ -81,23 +76,8 @@ export function Projects() {
         <ProjectsHeader>
           <p className="projects-subtitle">
             Uma coleção dos meus projetos favoritos, desde landing pages até
-            sistemas complexos. Cada um conta uma história diferente.
+            sistemas mais complexos. Cada um conta uma história diferente.
           </p>
-
-          <div className="projects-stats">
-            <div className="stat-item">
-              <div className="stat-number">{projects.length}+</div>
-              <div className="stat-label">Projetos</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">5+</div>
-              <div className="stat-label">Tecnologias</div>
-            </div>
-            <div className="stat-item">
-              <div className="stat-number">3+</div>
-              <div className="stat-label">Anos</div>
-            </div>
-          </div>
         </ProjectsHeader>
 
         <BodyProjects>
@@ -106,7 +86,6 @@ export function Projects() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            whileHover={{ y: -5 }}
             layout
           >
             <FilterToggleButton
@@ -139,31 +118,31 @@ export function Projects() {
                   onClick={() => handleFilterChange('react')}
                   $active={selectedFilter === 'react'}
                 >
-                  React ({getProjectCount('react')})
+                  React
                 </FilterButton>
                 <FilterButton
                   onClick={() => handleFilterChange('next')}
                   $active={selectedFilter === 'next'}
                 >
-                  Next.js ({getProjectCount('next')})
+                  Next.js
                 </FilterButton>
                 <FilterButton
                   onClick={() => handleFilterChange('tailwind')}
                   $active={selectedFilter === 'tailwind'}
                 >
-                  Tailwind ({getProjectCount('tailwind')})
+                  Tailwind
                 </FilterButton>
                 <FilterButton
                   onClick={() => handleFilterChange('node')}
                   $active={selectedFilter === 'node'}
                 >
-                  Node.js ({getProjectCount('node')})
+                  Node.js
                 </FilterButton>
                 <FilterButton
                   onClick={() => handleFilterChange('html/css/js')}
                   $active={selectedFilter === 'html/css/js'}
                 >
-                  Html/Css/Js ({getProjectCount('html/css/js')})
+                  Html/Css/Js
                 </FilterButton>
               </div>
             </FilterList>

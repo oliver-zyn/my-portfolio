@@ -32,6 +32,13 @@ Meu portfolio pessoal. O site apresenta uma interface moderna com glassmorphism,
 - **SEO Otimizado**: Meta tags e structured data para melhor indexação
 - **Performance**: Carregamento rápido e otimizações de imagem
 
+## 🔧 Variáveis de Ambiente
+
+Configure as seguintes variáveis copiando `.env.example` para `.env`:
+
+- `VITE_DEV_TO_URL`: URL da API do Dev.to para carregar artigos do blog
+- `VITE_FORM_SPREE_URL`: URL do Formspree para o formulário de contato
+
 ## ⚙️ Executando o projeto
 
 Primeiramente, deve-se instalar todas as dependências:

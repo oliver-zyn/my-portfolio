@@ -104,7 +104,7 @@ export const BodyAbout = styled.div`
 
       strong {
         color: ${(props) => props.theme['light-blue']};
-        font-weight: 500;
+        font-weight: 400;
       }
     }
   }
