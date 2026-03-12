@@ -1,12 +1,39 @@
 import { styled } from 'styled-components'
 
-export const HeaderContainer = styled.header`
+export const HeaderContainer = styled.header<{ $scrolled: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: ${(props) => (props.$scrolled ? '1rem 2rem' : '2rem 2rem')};
+  max-width: 1172px;
+  margin: 0 auto;
+  transition: padding 0.3s ease;
   opacity: 0;
   animation: onload-title-anim 1s ease forwards;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    background: ${(props) =>
+      props.$scrolled ? 'rgba(18, 18, 20, 0.8)' : 'transparent'};
+    backdrop-filter: ${(props) => (props.$scrolled ? 'blur(12px)' : 'none')};
+    border-bottom: 1px solid
+      ${(props) =>
+        props.$scrolled ? 'rgba(66, 211, 255, 0.1)' : 'transparent'};
+    transition: background 0.3s ease, backdrop-filter 0.3s ease,
+      border-bottom 0.3s ease;
+    z-index: -1;
+  }
 
   nav {
     display: flex;

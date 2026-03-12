@@ -6,7 +6,7 @@ export const FooterContainer = styled.section`
 
   border-top: 1px solid ${(props) => props.theme['gray-100']};
 
-  div {
+  & > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +20,16 @@ export const FooterContainer = styled.section`
       font-size: 0.8rem;
       color: ${(props) => props.theme['gray-100']};
     }
+
+    @media (max-width: 480px) {
+      h3 {
+        font-size: 0.9rem;
+      }
+
+      p {
+        font-size: 0.7rem;
+      }
+    }
   }
 `
 
@@ -28,4 +38,9 @@ export const Logo = styled.div`
   font-family: 'Roboto Mono', monospace;
   font-size: 1.05rem;
   text-shadow: 0px 0px 16px rgba(66, 211, 255, 0.25);
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `

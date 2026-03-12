@@ -1,9 +1,21 @@
 import { HeaderContainer, Logo } from './styles'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <HeaderContainer>
+    <HeaderContainer $scrolled={isScrolled}>
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}

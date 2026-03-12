@@ -19,6 +19,7 @@ export const SocialLinksContainer = styled.aside`
       &:is(:hover, :focus) {
         color: ${(props) => props.theme['text-base']};
         transform: translateY(-4px);
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));
       }
     }
 
