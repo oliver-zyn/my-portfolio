@@ -1,4 +1,9 @@
-import { styled } from 'styled-components'
+import { styled, keyframes } from 'styled-components'
+
+const shimmer = keyframes`
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+`
 
 export const BlogContainer = styled.section`
   width: 100%;
@@ -134,6 +139,78 @@ export const BlogCard = styled.article`
       flex-direction: column;
       align-items: flex-start;
       gap: 0.5rem;
+    }
+  }
+`
+
+export const BlogLoading = styled.div`
+  margin-top: 3rem;
+
+  .loading-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .skeleton-card {
+    background: rgba(24, 24, 26, 0.4);
+    border: 1px solid rgba(66, 211, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skeleton-line {
+    height: 16px;
+    border-radius: 8px;
+    background: linear-gradient(
+      90deg,
+      rgba(66, 211, 255, 0.05) 25%,
+      rgba(66, 211, 255, 0.1) 50%,
+      rgba(66, 211, 255, 0.05) 75%
+    );
+    background-size: 400px 100%;
+    animation: ${shimmer} 1.5s infinite linear;
+
+    &.short {
+      width: 40%;
+    }
+
+    &.medium {
+      width: 60%;
+    }
+  }
+`
+
+export const BlogError = styled.div`
+  margin-top: 3rem;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: rgba(24, 24, 26, 0.4);
+  border: 1px solid rgba(66, 211, 255, 0.1);
+  border-radius: 16px;
+
+  p {
+    color: ${(props) => props.theme['gray-100']};
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background: transparent;
+    border: 1px solid ${(props) => props.theme['light-blue']};
+    color: ${(props) => props.theme['light-blue']};
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(66, 211, 255, 0.1);
     }
   }
 `

@@ -11,7 +11,7 @@ import { Reveal } from '../Reveal'
 import { ProjectCard } from '../ProjectCard'
 import { TitleSection } from '../TitleSection'
 import { useState } from 'react'
-import { projects } from '../../utils/projetcsData'
+import { projects } from '../../utils/projectsData'
 import { motion } from 'framer-motion'
 import { FunnelSimple, CaretDown } from 'phosphor-react'
 

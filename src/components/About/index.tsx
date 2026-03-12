@@ -4,7 +4,7 @@ import { Brain, ChatsCircle, Palette, UsersThree } from 'phosphor-react'
 import { AboutCard } from '../AboutCard'
 import { Reveal } from '../Reveal'
 import { TitleSection } from '../TitleSection'
-import profileImg from '../../assets/profile.jpg'
+import profileImg from '../../assets/profile.png'
 
 export function About() {
   const titleAboutArray = ['S', 'o', 'b', 'r', 'e', ' ', 'm', 'i', 'm']

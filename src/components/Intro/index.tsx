@@ -16,7 +16,7 @@ export function Intro() {
           <span>Olá, eu sou</span>
           <TypewriterName>Oliverzyn</TypewriterName>
           <span>
-            Um desenvolvedor frontend focado em transformar ideias em realidade
+            Um desenvolvedor fullstack focado em transformar ideias em realidade
             com código e design moderno.
           </span>
         </TitleHome>

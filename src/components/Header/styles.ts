@@ -41,6 +41,22 @@ export const HeaderContainer = styled.header`
         transition-property: width, left;
       }
     }
+
+    @media (max-width: 750px) {
+      gap: 1.2rem;
+
+      a {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      gap: 0.8rem;
+
+      a {
+        font-size: 0.8rem;
+      }
+    }
   }
 
   @keyframes onload-header-anim {

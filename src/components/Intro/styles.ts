@@ -94,6 +94,7 @@ export const TypewriterName = styled.h1`
   white-space: nowrap;
   width: 0;
   margin: 0;
+  padding: 0.05em 0;
   justify-content: flex-start;
 
   animation: typing 2s steps(9, end) 0.8s forwards,

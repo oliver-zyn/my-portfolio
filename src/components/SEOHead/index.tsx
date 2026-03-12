@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async'
 
 export function SEOHead() {
-  const siteTitle = 'Oliver Mayer | Desenvolvedor Frontend'
+  const siteTitle = 'Oliver Mayer | Desenvolvedor Fullstack'
   const siteDescription =
-    'Desenvolvedor frontend especializado em React, Next.js e TypeScript. Criando experiências digitais incríveis com mais de 3 anos de experiência.'
-  const siteUrl = 'https://oliver-portfolio.com'
+    'Desenvolvedor Fullstack com 3+ anos de experiência profissional em desenvolvimento de sistemas e integrações robustas. Experiência com React, Next.js, TypeScript, C#, ASP.NET e Node.js.'
+  const siteUrl = 'https://oliverzyn.com'
   const author = 'Oliver Mayer'
 
   return (
@@ -33,7 +33,7 @@ export function SEOHead() {
           '@context': 'https://schema.org',
           '@type': 'Person',
           name: 'Oliver Mayer',
-          jobTitle: 'Desenvolvedor Frontend',
+          jobTitle: 'Desenvolvedor Fullstack',
           url: siteUrl,
           sameAs: [
             'https://github.com/oliver-zyn',
