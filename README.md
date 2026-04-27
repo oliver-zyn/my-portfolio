@@ -76,4 +76,4 @@ npm run lint
 - **LinkedIn**: [linkedin.com/in/oliverzyn](https://linkedin.com/in/oliverzyn)
 - **GitHub**: [github.com/oliver-zyn](https://github.com/oliver-zyn)
 - **Instagram**: [@oliverzyn_](https://instagram.com/oliverzyn_)
-- **Email**: [oliver@email.com](mailto:olivermayer15@email.com)
+- **Email**: [olivermayer15@gmail.com](mailto:olivermayer15@email.com)
